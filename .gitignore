@@ -1,0 +1,15 @@
+# Python / venv
+.venv/
+__pycache__/
+*.pyc
+
+# dbt artefacts
+target/
+dbt_packages/
+
+# IDE
+.vscode/
+.idea/
+
+# système
+.DS_Store

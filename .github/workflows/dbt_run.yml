@@ -1,0 +1,25 @@
+name: dbt tests
+on:
+  push:
+    branches: ['feature/**','dev']
+  pull_request:
+jobs:
+  dbt-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dbt + dbtvault
+        run: pip install dbt-postgres dbtvault
+      - name: Run dbt
+        env:
+          PG_PASSWORD: ${{ secrets.PG_PASSWORD }}
+        run: |
+          cd dbt/sid_lite
+          dbt deps
+          dbt seed --full-refresh
+          dbt run
+          dbt test

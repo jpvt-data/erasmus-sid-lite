@@ -21,6 +21,6 @@ jobs:
         env:
           PG_PASSWORD: ${{ secrets.PG_PASSWORD }}
         run: |
-          dbt seed --full-refresh
-          dbt run
-          dbt test
+            dbt seed --profiles-dir .dbt --full-refresh
+            dbt run  --profiles-dir .dbt
+            dbt test --profiles-dir .dbt

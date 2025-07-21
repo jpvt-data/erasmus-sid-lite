@@ -1,0 +1,28 @@
+name: dbt Tests
+
+on:
+  push:
+    branches: [ main, dev, "SCRUM-*" ]
+  pull_request:
+    branches: [ main, dev, "SCRUM-*" ]
+
+jobs:
+  run-dbt-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dbt & deps
+        run: 
+            pip install dbt-postgres
+      - name: Run dbt pipeline
+        env:
+          PG_PASSWORD: ${{ secrets.PG_PASSWORD }}
+        run: |
+            dbt deps --profiles-dir .dbt
+            dbt seed --profiles-dir .dbt --full-refresh
+            dbt run  --profiles-dir .dbt
+            dbt test --profiles-dir .dbt

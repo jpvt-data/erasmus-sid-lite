@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_etudiant
+    columns:
+      - name: id_etudiant
+        tests: [not_null, unique]
+  - name: stg_etablissement
+    columns:
+      - name: oid_etablissement
+        tests: [not_null, unique]
+  - name: stg_mobilite
+    columns:
+      - name: id_mobilite
+        tests: [not_null, unique]

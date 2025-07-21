@@ -1,0 +1,18 @@
+name: sid_lite
+version: '1.0'
+config-version: 2
+
+profile: sid_lite
+
+model-paths: ["dbt/sid-lite/models"]
+macro-paths: ["macros"]
+seed-paths: ["data/raw"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+models:
+  sid_lite:
+    +materialized: view

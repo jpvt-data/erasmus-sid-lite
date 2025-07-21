@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: hub_etudiant
+    columns:
+      - name: id_etudiant
+        tests: [unique, not_null]
+  - name: hub_etablissement
+    columns:
+      - name: oid_etablissement
+        tests: [unique, not_null]
+  - name: link_mobilite
+    columns:
+      - name: id_mobilite
+        tests: [unique, not_null]

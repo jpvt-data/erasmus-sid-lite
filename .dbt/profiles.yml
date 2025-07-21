@@ -1,0 +1,11 @@
+sid_lite:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: postgres
+      password: "{{ env_var('PG_PASSWORD') }}"
+      port: 5432
+      dbname: sid_lite
+      schema: public

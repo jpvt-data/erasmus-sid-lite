@@ -9,15 +9,38 @@ on:
 jobs:
   run-dbt-tests:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:15
+        ports: ['5432:5432']
+        env:
+          POSTGRES_DB: sid_lite
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: ${{ secrets.PG_PASSWORD }}
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
     steps:
       - uses: actions/checkout@v4
+      
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
+          
       - name: Install dbt & deps
         run: 
             pip install dbt-postgres
+            
+      - name: Create pgcrypto extension
+        run: |
+            psql -h localhost -U postgres -d sid_lite -c "CREATE EXTENSION IF NOT EXISTS pgcrypto;"
+        env:
+            PGPASSWORD: ${{ secrets.PG_PASSWORD }}
+            
       - name: Run dbt pipeline
         env:
           PG_PASSWORD: ${{ secrets.PG_PASSWORD }}

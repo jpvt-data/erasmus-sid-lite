@@ -6,6 +6,7 @@ __pycache__/
 # dbt artefacts
 target/
 dbt_packages/
+macros/
 
 # IDE
 .vscode/

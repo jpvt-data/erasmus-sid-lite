@@ -22,7 +22,7 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
-          
+
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
@@ -32,6 +32,11 @@ jobs:
       - name: Install dbt & deps
         run: 
             pip install dbt-postgres
+      - name: Create pgcrypto extension
+        run: |
+            psql -h localhost -U postgres -d sid_lite -c "CREATE EXTENSION IF NOT EXISTS pgcrypto;"
+        env:
+            PGPASSWORD: ${{ secrets.PG_PASSWORD }}
       - name: Run dbt pipeline
         env:
           PG_PASSWORD: ${{ secrets.PG_PASSWORD }}

@@ -21,7 +21,7 @@ jobs:
       - name: Run dbt pipeline
         env:
           PG_PASSWORD: ${{ secrets.PG_PASSWORD }}
-        run: 
+        run: |
             dbt deps --profiles-dir .dbt
             dbt seed --profiles-dir .dbt --full-refresh
             dbt run  --profiles-dir .dbt

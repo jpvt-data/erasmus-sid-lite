@@ -1,0 +1,501 @@
+oid_etablissement,nom_etablissement,pays,type_organisation
+OID0001,Université Lake Davidhaven,LV,School
+OID0002,Université South Katrinafurt,AT,School
+OID0003,Université North Laura,HR,NGO
+OID0004,Université Lucasfort,EE,HEI
+OID0005,Université Hendersontown,BG,School
+OID0006,Université Coopertown,BE,School
+OID0007,Université Connermouth,DE,School
+OID0008,Université New Rebeccahaven,RO,NGO
+OID0009,Université Reneeport,ES,School
+OID0010,Université Sotoshire,HU,HEI
+OID0011,Université East Michelle,FR,School
+OID0012,Université Hoganhaven,BG,NGO
+OID0013,Université Robertbury,GR,School
+OID0014,Université Lake Shawnburgh,HU,HEI
+OID0015,Université Alanborough,SI,NGO
+OID0016,Université Lake Jamesfort,HR,School
+OID0017,Université North Matthew,LV,School
+OID0018,Université New Teresastad,LT,School
+OID0019,Université New Tiffany,LU,NGO
+OID0020,Université East Stephanie,IE,School
+OID0021,Université Lake Tracy,DK,NGO
+OID0022,Université North Gregorymouth,FI,School
+OID0023,Université Robinsontown,PT,NGO
+OID0024,Université South Wendyview,FI,School
+OID0025,Université Hansontown,DK,NGO
+OID0026,Université Andersonburgh,FR,School
+OID0027,Université Burkehaven,EE,NGO
+OID0028,Université Turnerview,BG,HEI
+OID0029,Université Lake Andre,BE,School
+OID0030,Université South Daleview,LV,School
+OID0031,Université East Jason,FI,School
+OID0032,Université South Tiffanyfurt,CZ,NGO
+OID0033,Université New Laura,PL,NGO
+OID0034,Université Port Jill,HR,NGO
+OID0035,Université North Laura,HU,HEI
+OID0036,Université Port Charlesland,LU,School
+OID0037,Université Norrisside,ES,NGO
+OID0038,Université Jeremychester,ES,School
+OID0039,Université New Lindsey,PL,School
+OID0040,Université Port Jessebury,ES,HEI
+OID0041,Université Sarahberg,EE,NGO
+OID0042,Université Comptonside,BG,NGO
+OID0043,Université Lake Danielstad,SK,HEI
+OID0044,Université Port Patrickfurt,HU,HEI
+OID0045,Université Christopherchester,DK,NGO
+OID0046,Université South Bruce,IT,School
+OID0047,Université Port Erin,LV,School
+OID0048,Université Stephaniestad,LT,NGO
+OID0049,Université South Rodney,HU,School
+OID0050,Université Lucasfort,DE,NGO
+OID0051,Université New Franciscofurt,FI,School
+OID0052,Université South Anthonybury,SK,HEI
+OID0053,Université Port Kristenbury,EE,NGO
+OID0054,Université Elliottview,PL,NGO
+OID0055,Université Greermouth,HR,HEI
+OID0056,Université Martinbury,IE,NGO
+OID0057,Université East Donnastad,IT,HEI
+OID0058,Université Lake Michaelfort,LV,NGO
+OID0059,Université Williamsberg,LV,School
+OID0060,Université Thorntonton,DE,HEI
+OID0061,Université South Christopherchester,DK,HEI
+OID0062,Université Michaelland,CZ,School
+OID0063,Université East Rachel,PT,NGO
+OID0064,Université Joshuafurt,LU,School
+OID0065,Université East Nancyville,SK,School
+OID0066,Université South Jordanburgh,SI,School
+OID0067,Université Susanfurt,LV,HEI
+OID0068,Université South Jeff,SI,NGO
+OID0069,Université Allenmouth,BE,HEI
+OID0070,Université Adamfurt,FI,School
+OID0071,Université East Andrewburgh,NL,HEI
+OID0072,Université Jacobsside,SK,School
+OID0073,Université Audreyberg,GR,School
+OID0074,Université New Catherine,SK,HEI
+OID0075,Université Port Debbiestad,BG,HEI
+OID0076,Université Hartland,SE,School
+OID0077,Université Jessicabury,SK,NGO
+OID0078,Université Delacruzfurt,FR,School
+OID0079,Université West Joshua,NL,HEI
+OID0080,Université Rossside,AT,NGO
+OID0081,Université Craneshire,EE,School
+OID0082,Université Hernandezton,EE,School
+OID0083,Université Hannahhaven,FR,School
+OID0084,Université Michellehaven,NL,NGO
+OID0085,Université North Elizabeth,GR,HEI
+OID0086,Université Riveraport,DK,HEI
+OID0087,Université South Susanbury,LU,School
+OID0088,Université New Christopherburgh,GR,NGO
+OID0089,Université Peterport,EE,HEI
+OID0090,Université Jeanview,EE,School
+OID0091,Université South Nicolebury,BE,School
+OID0092,Université West Josephville,BE,NGO
+OID0093,Université West Thomasside,SE,HEI
+OID0094,Université Mirandaport,LU,HEI
+OID0095,Université Danielshire,DE,NGO
+OID0096,Université New Mikeside,GR,HEI
+OID0097,Université Christinehaven,IE,NGO
+OID0098,Université Finleytown,ES,NGO
+OID0099,Université Trevorport,EE,NGO
+OID0100,Université Port Gregoryberg,NL,School
+OID0101,Université Andrewshire,IE,NGO
+OID0102,Université North Crystal,FI,HEI
+OID0103,Université West Ann,SK,NGO
+OID0104,Université Lake Kristin,SK,HEI
+OID0105,Université Floreshaven,HR,HEI
+OID0106,Université North Nicholas,PT,HEI
+OID0107,Université Lake Lisa,LV,HEI
+OID0108,Université Lake Christopherfort,DE,School
+OID0109,Université South Travis,HU,NGO
+OID0110,Université Torresbury,BG,NGO
+OID0111,Université Martinside,DK,HEI
+OID0112,Université Lake Brianbury,AT,NGO
+OID0113,Université Aguilarton,AT,NGO
+OID0114,Université South Francesbury,AT,School
+OID0115,Université West Brian,FR,NGO
+OID0116,Université North Amyberg,ES,School
+OID0117,Université South Charlesstad,LT,HEI
+OID0118,Université Reidborough,RO,HEI
+OID0119,Université Ashleymouth,ES,NGO
+OID0120,Université Cabreraside,CZ,NGO
+OID0121,Université New Jessechester,BE,NGO
+OID0122,Université Port Anthonymouth,DK,HEI
+OID0123,Université Port Michaelmouth,FR,NGO
+OID0124,Université Muellerfort,LT,HEI
+OID0125,Université North Richardchester,SE,School
+OID0126,Université Stacyborough,AT,School
+OID0127,Université Clarkfurt,EE,School
+OID0128,Université East Anna,GR,School
+OID0129,Université South Leemouth,HU,School
+OID0130,Université Port Christophermouth,GR,HEI
+OID0131,Université Hodgehaven,DE,School
+OID0132,Université Curryshire,DE,School
+OID0133,Université West Samuel,FR,NGO
+OID0134,Université Rodriguezburgh,AT,School
+OID0135,Université Coltonmouth,IT,NGO
+OID0136,Université East Cindy,HR,School
+OID0137,Université Lutzfort,BG,HEI
+OID0138,Université New Sarah,BG,HEI
+OID0139,Université Morganhaven,SK,NGO
+OID0140,Université South Jeffery,BE,HEI
+OID0141,Université Johnland,SK,NGO
+OID0142,Université West Tinaborough,LT,HEI
+OID0143,Université Port Brittany,PL,NGO
+OID0144,Université West Allison,AT,HEI
+OID0145,Université Wrightport,SI,School
+OID0146,Université North Patrickview,DE,HEI
+OID0147,Université Lake Jason,IE,NGO
+OID0148,Université East Gerald,CZ,HEI
+OID0149,Université Martinezshire,BE,School
+OID0150,Université Joshuamouth,HR,NGO
+OID0151,Université New Benjamin,BE,School
+OID0152,Université South Laura,HU,NGO
+OID0153,Université Stacieberg,DK,School
+OID0154,Université Tammytown,LT,HEI
+OID0155,Université Jacksonberg,AT,School
+OID0156,Université Williamstown,HR,School
+OID0157,Université Williamton,DK,HEI
+OID0158,Université Port Jasminebury,BE,School
+OID0159,Université Osborneside,EE,School
+OID0160,Université New Jennifer,IT,HEI
+OID0161,Université West Angelburgh,SI,NGO
+OID0162,Université South Jasonville,PL,HEI
+OID0163,Université Jameston,ES,HEI
+OID0164,Université South Natalie,FI,HEI
+OID0165,Université Port Robertfort,FR,HEI
+OID0166,Université Port Timothy,AT,NGO
+OID0167,Université South Antonio,SK,School
+OID0168,Université Lindastad,LV,HEI
+OID0169,Université Nguyenchester,FR,School
+OID0170,Université New Amy,IT,NGO
+OID0171,Université Toddfort,FR,HEI
+OID0172,Université Charlesstad,SE,School
+OID0173,Université Bergerside,LU,NGO
+OID0174,Université Jenniferbury,DK,NGO
+OID0175,Université Carlfort,CZ,NGO
+OID0176,Université Floresfort,SK,HEI
+OID0177,Université Lake Christyview,BG,NGO
+OID0178,Université Hardingmouth,PL,NGO
+OID0179,Université Theodoreland,NL,HEI
+OID0180,Université North Kevin,CZ,NGO
+OID0181,Université West Andreahaven,CZ,HEI
+OID0182,Université Fisherton,PL,NGO
+OID0183,Université Port Thomasview,PT,HEI
+OID0184,Université North Johntown,BG,HEI
+OID0185,Université New Andrewmouth,HU,NGO
+OID0186,Université South Barbaratown,IE,HEI
+OID0187,Université Michellebury,FR,NGO
+OID0188,Université Woodfurt,CZ,HEI
+OID0189,Université Romanside,SE,NGO
+OID0190,Université North Zacharybury,LV,HEI
+OID0191,Université North Judyburgh,FI,School
+OID0192,Université Reedville,SE,HEI
+OID0193,Université Robertsmouth,HR,HEI
+OID0194,Université Lake Michael,EE,HEI
+OID0195,Université Merrittmouth,LT,HEI
+OID0196,Université Lake Carol,IT,School
+OID0197,Université Port Sean,FR,HEI
+OID0198,Université East Thomasstad,LT,NGO
+OID0199,Université South Stephanie,GR,NGO
+OID0200,Université West Brandon,LT,NGO
+OID0201,Université East Shawnton,FI,School
+OID0202,Université Port Corey,DK,School
+OID0203,Université Melissaville,LT,NGO
+OID0204,Université West Sonya,LV,HEI
+OID0205,Université Lake Ralph,LT,School
+OID0206,Université West Damonfurt,PL,NGO
+OID0207,Université South Christinachester,LT,NGO
+OID0208,Université New Dawnhaven,EE,School
+OID0209,Université South Mariemouth,AT,NGO
+OID0210,Université Smithberg,SI,NGO
+OID0211,Université North Donnaside,RO,School
+OID0212,Université Millerstad,SE,HEI
+OID0213,Université East Amandamouth,CZ,School
+OID0214,Université Pageside,FI,NGO
+OID0215,Université West Bethchester,ES,School
+OID0216,Université Port Gregoryton,BG,NGO
+OID0217,Université Kellybury,ES,HEI
+OID0218,Université Conwaychester,LT,NGO
+OID0219,Université Smithview,ES,NGO
+OID0220,Université Port Christopherhaven,DE,HEI
+OID0221,Université South Deborahfort,FI,School
+OID0222,Université New Barbarahaven,LU,HEI
+OID0223,Université Port Tony,FR,NGO
+OID0224,Université New Christopher,HU,NGO
+OID0225,Université Vanessahaven,GR,NGO
+OID0226,Université Shahstad,FR,HEI
+OID0227,Université New Kimberly,GR,HEI
+OID0228,Université West Amber,IE,HEI
+OID0229,Université Port Thomasmouth,RO,NGO
+OID0230,Université Johnsonstad,SK,NGO
+OID0231,Université West Cory,HR,School
+OID0232,Université Herreraside,BE,HEI
+OID0233,Université North Craigville,CZ,School
+OID0234,Université New Robert,CZ,HEI
+OID0235,Université Karinaside,GR,NGO
+OID0236,Université East Megan,BE,School
+OID0237,Université Lake Katelyn,HR,School
+OID0238,Université Kellyberg,BE,School
+OID0239,Université New Danielburgh,PL,NGO
+OID0240,Université East Annette,AT,HEI
+OID0241,Université New Anthonyborough,RO,HEI
+OID0242,Université South Jacobport,EE,School
+OID0243,Université Makaylafurt,EE,HEI
+OID0244,Université Schroedershire,IE,HEI
+OID0245,Université Davidsonchester,RO,HEI
+OID0246,Université West Ryanbury,HR,NGO
+OID0247,Université East Joelshire,SK,NGO
+OID0248,Université West Sarah,SE,NGO
+OID0249,Université Jenniferburgh,SE,School
+OID0250,Université West Timothyburgh,BE,School
+OID0251,Université Sarahhaven,GR,School
+OID0252,Université Reneeburgh,LV,School
+OID0253,Université Sloanberg,LU,NGO
+OID0254,Université West Andrea,LU,HEI
+OID0255,Université East Tammy,FI,HEI
+OID0256,Université Susanton,LV,HEI
+OID0257,Université Lake Joshuamouth,GR,HEI
+OID0258,Université Pachecomouth,HR,School
+OID0259,Université New Georgeland,PL,NGO
+OID0260,Université Morristown,PT,NGO
+OID0261,Université Martinbury,HR,HEI
+OID0262,Université Bennettfurt,ES,School
+OID0263,Université East Amanda,LT,School
+OID0264,Université Port John,EE,NGO
+OID0265,Université Whitebury,BG,School
+OID0266,Université Campbellfort,FR,School
+OID0267,Université East Cory,LT,School
+OID0268,Université Martinside,GR,HEI
+OID0269,Université Mikestad,NL,School
+OID0270,Université Levymouth,HU,HEI
+OID0271,Université Salazarmouth,LU,School
+OID0272,Université Chavezfurt,BG,HEI
+OID0273,Université Joshuaberg,HU,NGO
+OID0274,Université North Courtneyview,PL,NGO
+OID0275,Université New Albert,IT,NGO
+OID0276,Université New Jacqueline,LT,NGO
+OID0277,Université East Coltonmouth,EE,School
+OID0278,Université Stevenbury,BG,HEI
+OID0279,Université Wilsonhaven,AT,NGO
+OID0280,Université Jamesville,FR,NGO
+OID0281,Université West Alexisport,LU,School
+OID0282,Université Obrienfurt,HU,School
+OID0283,Université Lake Michaelburgh,HU,NGO
+OID0284,Université South Brenda,FI,HEI
+OID0285,Université Port Kelly,IT,School
+OID0286,Université West Lisaside,SI,School
+OID0287,Université Jamiemouth,FR,School
+OID0288,Université Port Sherimouth,DE,School
+OID0289,Université Normanbury,GR,HEI
+OID0290,Université Brettland,FI,NGO
+OID0291,Université Juliamouth,PT,NGO
+OID0292,Université Scottville,EE,NGO
+OID0293,Université Robertshire,ES,School
+OID0294,Université Elliottburgh,HU,School
+OID0295,Université Lake Ryanshire,PL,HEI
+OID0296,Université East David,IT,HEI
+OID0297,Université New Sherylburgh,NL,School
+OID0298,Université North Heatherborough,DE,School
+OID0299,Université Kylebury,BE,NGO
+OID0300,Université Ellisborough,FR,HEI
+OID0301,Université Lake Jenniferfort,ES,School
+OID0302,Université Fisherfort,SE,HEI
+OID0303,Université South Jason,NL,NGO
+OID0304,Université South Shawn,BE,School
+OID0305,Université Reyeshaven,DK,School
+OID0306,Université New Johnside,LU,NGO
+OID0307,Université New Danielmouth,IE,HEI
+OID0308,Université North Aliciabury,SK,HEI
+OID0309,Université East Victoriachester,LU,HEI
+OID0310,Université Floresport,LV,HEI
+OID0311,Université Wallacehaven,HU,HEI
+OID0312,Université East Shawn,LU,School
+OID0313,Université Jackmouth,IT,NGO
+OID0314,Université Schwartzfort,FI,HEI
+OID0315,Université West Anthony,SI,HEI
+OID0316,Université Rileyside,IT,School
+OID0317,Université New Felicia,BE,School
+OID0318,Université Billymouth,LT,School
+OID0319,Université East Rhonda,LU,School
+OID0320,Université Lake Johnburgh,HR,HEI
+OID0321,Université New Ryanborough,FI,HEI
+OID0322,Université New Brian,SK,HEI
+OID0323,Université North Adrianborough,CZ,HEI
+OID0324,Université West Janeville,NL,NGO
+OID0325,Université Davidburgh,GR,HEI
+OID0326,Université Joland,RO,School
+OID0327,Université Port Michaelland,SK,School
+OID0328,Université South Kristyfurt,ES,NGO
+OID0329,Université Johnberg,BE,School
+OID0330,Université Gomezborough,LU,HEI
+OID0331,Université Jeffreyburgh,DK,HEI
+OID0332,Université Wardfort,PL,NGO
+OID0333,Université Hodgeville,PT,HEI
+OID0334,Université North April,RO,NGO
+OID0335,Université Barronbury,IT,NGO
+OID0336,Université Lanefort,FI,NGO
+OID0337,Université Martintown,FR,HEI
+OID0338,Université Lake Michelle,SI,School
+OID0339,Université East Becky,PL,School
+OID0340,Université Port Jaclyn,PL,School
+OID0341,Université Foleyview,LT,HEI
+OID0342,Université Port Ashley,LU,NGO
+OID0343,Université Smithland,LT,HEI
+OID0344,Université Williamsport,DK,NGO
+OID0345,Université Combsfort,FR,HEI
+OID0346,Université South Duane,IT,School
+OID0347,Université West Angela,NL,School
+OID0348,Université Lake Benjaminberg,IE,NGO
+OID0349,Université Christopherburgh,DK,NGO
+OID0350,Université West James,FR,NGO
+OID0351,Université Wilsonborough,BG,HEI
+OID0352,Université Port Taylorchester,SI,HEI
+OID0353,Université West Kimberly,BE,HEI
+OID0354,Université Port Davidside,ES,School
+OID0355,Université South William,DE,School
+OID0356,Université West Jamesport,SE,School
+OID0357,Université New Lori,DK,NGO
+OID0358,Université Jessicachester,LU,School
+OID0359,Université Schultzshire,EE,School
+OID0360,Université West Paulland,HR,School
+OID0361,Université Combsville,SK,HEI
+OID0362,Université North Sean,NL,School
+OID0363,Université New Benjamin,AT,HEI
+OID0364,Université Evanchester,GR,HEI
+OID0365,Université South Elizabeth,BE,School
+OID0366,Université Georgeshire,LV,HEI
+OID0367,Université Watsonshire,GR,NGO
+OID0368,Université East Keith,HR,HEI
+OID0369,Université West Karenshire,IT,NGO
+OID0370,Université Ferrellmouth,DE,School
+OID0371,Université Sheilaside,LT,HEI
+OID0372,Université Torresborough,AT,HEI
+OID0373,Université Thomasbury,LT,NGO
+OID0374,Université Port Danielview,SE,NGO
+OID0375,Université Littleville,PL,HEI
+OID0376,Université South Marcus,IE,HEI
+OID0377,Université Lake John,PL,School
+OID0378,Université Harrisonland,SI,HEI
+OID0379,Université Jacksonchester,ES,HEI
+OID0380,Université Port Nicholas,BG,School
+OID0381,Université South Hayleymouth,PT,HEI
+OID0382,Université West Anna,BG,School
+OID0383,Université Bauerside,BE,School
+OID0384,Université North Johnview,SK,School
+OID0385,Université East Samuelmouth,SI,School
+OID0386,Université Aguirreton,LU,NGO
+OID0387,Université North Larry,NL,NGO
+OID0388,Université North Alexander,PT,NGO
+OID0389,Université Lake Melanie,EE,NGO
+OID0390,Université East Brenda,HR,School
+OID0391,Université Lake Ginachester,AT,School
+OID0392,Université Lake Brianview,PL,NGO
+OID0393,Université Nunezstad,SI,NGO
+OID0394,Université Higginschester,AT,HEI
+OID0395,Université South Aliciachester,LV,School
+OID0396,Université West Crystal,SE,HEI
+OID0397,Université East Wesley,SI,HEI
+OID0398,Université Markchester,AT,School
+OID0399,Université Joeport,LT,NGO
+OID0400,Université South Levi,GR,NGO
+OID0401,Université Nathanielfurt,LU,HEI
+OID0402,Université New Melissa,PT,NGO
+OID0403,Université North Julia,HR,NGO
+OID0404,Université South Ashley,AT,School
+OID0405,Université West Jessicafurt,LV,NGO
+OID0406,Université Leonardtown,EE,HEI
+OID0407,Université North Dana,LV,NGO
+OID0408,Université North Vanessachester,EE,School
+OID0409,Université Cruzchester,SE,NGO
+OID0410,Université North Kristin,EE,HEI
+OID0411,Université North Monica,EE,HEI
+OID0412,Université Davisport,FR,HEI
+OID0413,Université Edwardville,BG,NGO
+OID0414,Université Michelleport,GR,NGO
+OID0415,Université East Tonya,GR,HEI
+OID0416,Université Joshualand,AT,School
+OID0417,Université Port Caitlin,AT,School
+OID0418,Université Ruthville,LU,HEI
+OID0419,Université South Michaelland,IT,NGO
+OID0420,Université Port Jeffreyfurt,HU,NGO
+OID0421,Université North Todd,ES,HEI
+OID0422,Université Lake Dianaview,DK,HEI
+OID0423,Université Craigborough,HR,NGO
+OID0424,Université New Robert,CZ,NGO
+OID0425,Université Hamiltonchester,GR,HEI
+OID0426,Université Kellyburgh,SE,School
+OID0427,Université North Shannonburgh,BE,School
+OID0428,Université Mckenziehaven,DK,HEI
+OID0429,Université Robertmouth,IT,HEI
+OID0430,Université Thomasburgh,PL,HEI
+OID0431,Université Ortegaview,ES,HEI
+OID0432,Université East Amanda,CZ,HEI
+OID0433,Université North Kimberly,ES,HEI
+OID0434,Université East Tyler,GR,School
+OID0435,Université Marshallbury,IT,School
+OID0436,Université South Marcus,EE,NGO
+OID0437,Université Jenningstown,LV,NGO
+OID0438,Université Beckside,DK,HEI
+OID0439,Université South Anthony,SK,NGO
+OID0440,Université Danielstown,DK,NGO
+OID0441,Université New Julia,RO,NGO
+OID0442,Université Figueroaville,GR,School
+OID0443,Université West Adamtown,RO,HEI
+OID0444,Université Lake Brendaside,BG,School
+OID0445,Université Danielberg,FR,NGO
+OID0446,Université Port Andrewtown,CZ,HEI
+OID0447,Université Lewisview,PL,HEI
+OID0448,Université Garyburgh,NL,School
+OID0449,Université Willisport,NL,HEI
+OID0450,Université East Kevinfort,HU,NGO
+OID0451,Université Jeffreyville,FR,HEI
+OID0452,Université New Dustin,AT,NGO
+OID0453,Université West Derrickville,EE,HEI
+OID0454,Université East Riley,SI,NGO
+OID0455,Université West Virginia,HU,HEI
+OID0456,Université Villarrealtown,AT,HEI
+OID0457,Université New Alexis,HR,HEI
+OID0458,Université Port Jose,SI,HEI
+OID0459,Université Ericton,SK,HEI
+OID0460,Université Kelseyberg,LU,NGO
+OID0461,Université South Ashley,LU,School
+OID0462,Université Lake Annettebury,BE,School
+OID0463,Université Kruegerberg,HR,School
+OID0464,Université Jacobchester,LU,School
+OID0465,Université Jameshaven,IE,NGO
+OID0466,Université Stephanieshire,BG,School
+OID0467,Université Staceystad,DE,NGO
+OID0468,Université Lake James,ES,School
+OID0469,Université North Pamelaberg,LU,NGO
+OID0470,Université Erinberg,RO,School
+OID0471,Université Bradleyhaven,DK,School
+OID0472,Université Hillberg,PL,School
+OID0473,Université West Katherineberg,HU,School
+OID0474,Université Kristinton,HU,School
+OID0475,Université Harrisfort,NL,HEI
+OID0476,Université Lake Joshuatown,SK,NGO
+OID0477,Université South Garyport,SK,NGO
+OID0478,Université North Dennis,NL,NGO
+OID0479,Université East Zacharyborough,BE,NGO
+OID0480,Université Craigshire,CZ,School
+OID0481,Université West Susan,HU,NGO
+OID0482,Université North Michael,AT,NGO
+OID0483,Université Duncanfurt,CZ,HEI
+OID0484,Université East Kevin,BG,School
+OID0485,Université New Cynthia,FI,NGO
+OID0486,Université Cervanteschester,FR,School
+OID0487,Université South Julian,LV,HEI
+OID0488,Université Lake Billyfurt,DK,NGO
+OID0489,Université Michaelton,SE,HEI
+OID0490,Université West Jonathanland,BE,School
+OID0491,Université East William,BG,School
+OID0492,Université West Elizabethstad,FI,School
+OID0493,Université East Christopherville,LT,School
+OID0494,Université South Andrewhaven,RO,NGO
+OID0495,Université Valdezfort,IE,School
+OID0496,Université Hannahburgh,DE,School
+OID0497,Université Port Jamie,DE,School
+OID0498,Université South Alexandra,EE,NGO
+OID0499,Université New Markburgh,PL,School
+OID0500,Université Lake Kyle,DK,School

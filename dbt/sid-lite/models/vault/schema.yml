@@ -12,3 +12,7 @@ models:
     columns:
       - name: id_mobilite
         tests: [unique, not_null]
+  - name : sat_mobilite
+    columns:
+      - name: id_mobilite
+        tests: [unique, not_null]

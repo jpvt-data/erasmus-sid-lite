@@ -16,7 +16,9 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install dbt & deps
-        run: pip install dbt-postgres
+        run: 
+            pip install dbt-postgres
+            dbt deps
       - name: Run dbt pipeline
         env:
           PG_PASSWORD: ${{ secrets.PG_PASSWORD }}

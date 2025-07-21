@@ -13,6 +13,7 @@ select
     etu.date_naissance,
     etu.sexe,
     etu.nationalite,
+    etu.discipline,
     -- Etablissement d'origine
     e_orig.oid_etablissement as oid_etablissement_origine,
     e_orig.nom_etablissement as nom_etab_origine,

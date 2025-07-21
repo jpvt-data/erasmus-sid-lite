@@ -33700,3 +33700,1699 @@ having count(*) > 1
 [0m23:17:54.035682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261F739F150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261F739F110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261F739F190>]}
 [0m23:17:54.037250 [debug] [MainThread]: Flushing usage events
 [0m23:17:54.501112 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:48:30.694746 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002329CA4EB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002329DA73F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002329DA70990>]}
+
+
+============================== 23:48:30.694746 | f8ed994c-c74b-4b8a-a5c2-ce6d732b2f44 ==============================
+[0m23:48:30.694746 [info ] [MainThread]: Running with dbt=1.10.4
+[0m23:48:30.694746 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\jpvt\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'D:\\GitHub\\erasmus-sid-lite\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:48:30.889518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f8ed994c-c74b-4b8a-a5c2-ce6d732b2f44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002329DCBE6D0>]}
+[0m23:48:30.954517 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f8ed994c-c74b-4b8a-a5c2-ce6d732b2f44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000232992FED90>]}
+[0m23:48:30.957311 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m23:48:31.142485 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m23:48:31.355785 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m23:48:31.357812 [debug] [MainThread]: Partial parsing: updated file: sid_lite://dbt/sid-lite/models\marts\vw_fait_mobilite.sql
+[0m23:48:31.845620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f8ed994c-c74b-4b8a-a5c2-ce6d732b2f44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002329E021290>]}
+[0m23:48:31.926060 [debug] [MainThread]: Wrote artifact WritableManifest to D:\GitHub\erasmus-sid-lite\target\manifest.json
+[0m23:48:31.930442 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\GitHub\erasmus-sid-lite\target\semantic_manifest.json
+[0m23:48:31.950193 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f8ed994c-c74b-4b8a-a5c2-ce6d732b2f44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002329E5A8E50>]}
+[0m23:48:31.953574 [info ] [MainThread]: Found 8 models, 3 seeds, 16 data tests, 822 macros
+[0m23:48:31.955582 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f8ed994c-c74b-4b8a-a5c2-ce6d732b2f44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002329DD3CFD0>]}
+[0m23:48:31.959660 [info ] [MainThread]: 
+[0m23:48:31.959660 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:48:31.960952 [info ] [MainThread]: 
+[0m23:48:31.960952 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m23:48:31.966931 [debug] [ThreadPool]: Acquiring new postgres connection 'list_sid_lite'
+[0m23:48:32.115521 [debug] [ThreadPool]: Using postgres connection "list_sid_lite"
+[0m23:48:32.115521 [debug] [ThreadPool]: On list_sid_lite: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "connection_name": "list_sid_lite"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m23:48:32.115521 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:48:32.171983 [debug] [ThreadPool]: SQL status: SELECT 64 in 0.059 seconds
+[0m23:48:32.171983 [debug] [ThreadPool]: On list_sid_lite: Close
+[0m23:48:32.180043 [debug] [ThreadPool]: Acquiring new postgres connection 'list_sid_lite_public'
+[0m23:48:32.180043 [debug] [ThreadPool]: Using postgres connection "list_sid_lite_public"
+[0m23:48:32.188257 [debug] [ThreadPool]: On list_sid_lite_public: BEGIN
+[0m23:48:32.188952 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:48:32.229143 [debug] [ThreadPool]: SQL status: BEGIN in 0.041 seconds
+[0m23:48:32.229143 [debug] [ThreadPool]: Using postgres connection "list_sid_lite_public"
+[0m23:48:32.229143 [debug] [ThreadPool]: On list_sid_lite_public: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "connection_name": "list_sid_lite_public"} */
+select
+      'sid_lite' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'sid_lite' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'sid_lite' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m23:48:32.229143 [debug] [ThreadPool]: SQL status: SELECT 11 in 0.004 seconds
+[0m23:48:32.238251 [debug] [ThreadPool]: On list_sid_lite_public: ROLLBACK
+[0m23:48:32.238911 [debug] [ThreadPool]: On list_sid_lite_public: Close
+[0m23:48:32.245155 [debug] [MainThread]: Using postgres connection "master"
+[0m23:48:32.245155 [debug] [MainThread]: On master: BEGIN
+[0m23:48:32.246685 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:48:32.279222 [debug] [MainThread]: SQL status: BEGIN in 0.037 seconds
+[0m23:48:32.279222 [debug] [MainThread]: Using postgres connection "master"
+[0m23:48:32.279222 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m23:48:32.290778 [debug] [MainThread]: SQL status: SELECT 6 in 0.007 seconds
+[0m23:48:32.290778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f8ed994c-c74b-4b8a-a5c2-ce6d732b2f44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002329E5B8D50>]}
+[0m23:48:32.295347 [debug] [MainThread]: On master: ROLLBACK
+[0m23:48:32.295347 [debug] [MainThread]: Using postgres connection "master"
+[0m23:48:32.295347 [debug] [MainThread]: On master: BEGIN
+[0m23:48:32.295347 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m23:48:32.295347 [debug] [MainThread]: On master: COMMIT
+[0m23:48:32.295347 [debug] [MainThread]: Using postgres connection "master"
+[0m23:48:32.295347 [debug] [MainThread]: On master: COMMIT
+[0m23:48:32.299340 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m23:48:32.299340 [debug] [MainThread]: On master: Close
+[0m23:48:32.303851 [debug] [Thread-1 (]: Began running node model.sid_lite.stg_etablissement
+[0m23:48:32.303851 [info ] [Thread-1 (]: 1 of 8 START sql view model public.stg_etablissement ........................... [RUN]
+[0m23:48:32.305961 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.sid_lite.stg_etablissement'
+[0m23:48:32.305961 [debug] [Thread-1 (]: Began compiling node model.sid_lite.stg_etablissement
+[0m23:48:32.314053 [debug] [Thread-1 (]: Writing injected SQL for node "model.sid_lite.stg_etablissement"
+[0m23:48:32.314053 [debug] [Thread-1 (]: Began executing node model.sid_lite.stg_etablissement
+[0m23:48:32.345434 [debug] [Thread-1 (]: Writing runtime sql for node "model.sid_lite.stg_etablissement"
+[0m23:48:32.345434 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.stg_etablissement"
+[0m23:48:32.352446 [debug] [Thread-1 (]: On model.sid_lite.stg_etablissement: BEGIN
+[0m23:48:32.352446 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:48:32.393429 [debug] [Thread-1 (]: SQL status: BEGIN in 0.042 seconds
+[0m23:48:32.393429 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.stg_etablissement"
+[0m23:48:32.393429 [debug] [Thread-1 (]: On model.sid_lite.stg_etablissement: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.stg_etablissement"} */
+
+  create view "sid_lite"."public"."stg_etablissement__dbt_tmp"
+    
+    
+  as (
+    
+
+select
+    oid_etablissement,
+    nom_etablissement,
+    pays,
+    type_organisation,
+    current_timestamp as load_dts,      -- champ obligatoire pour Data Vault (horodatage du chargement)
+    'ERASMUS' as source                -- champ obligatoire pour Data Vault (identifiant de la source)
+from "sid_lite"."public"."etablissement"
+  );
+[0m23:48:32.396797 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.003 seconds
+[0m23:48:32.405579 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.stg_etablissement"
+[0m23:48:32.405579 [debug] [Thread-1 (]: On model.sid_lite.stg_etablissement: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.stg_etablissement"} */
+alter table "sid_lite"."public"."stg_etablissement" rename to "stg_etablissement__dbt_backup"
+[0m23:48:32.406660 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m23:48:32.408636 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.stg_etablissement"
+[0m23:48:32.410141 [debug] [Thread-1 (]: On model.sid_lite.stg_etablissement: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.stg_etablissement"} */
+alter table "sid_lite"."public"."stg_etablissement__dbt_tmp" rename to "stg_etablissement"
+[0m23:48:32.410141 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m23:48:32.422049 [debug] [Thread-1 (]: On model.sid_lite.stg_etablissement: COMMIT
+[0m23:48:32.422049 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.stg_etablissement"
+[0m23:48:32.422049 [debug] [Thread-1 (]: On model.sid_lite.stg_etablissement: COMMIT
+[0m23:48:32.460832 [debug] [Thread-1 (]: SQL status: COMMIT in 0.038 seconds
+[0m23:48:32.467072 [debug] [Thread-1 (]: Applying DROP to: "sid_lite"."public"."stg_etablissement__dbt_backup"
+[0m23:48:32.471533 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.stg_etablissement"
+[0m23:48:32.471533 [debug] [Thread-1 (]: On model.sid_lite.stg_etablissement: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.stg_etablissement"} */
+drop view if exists "sid_lite"."public"."stg_etablissement__dbt_backup" cascade
+[0m23:48:32.474554 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m23:48:32.478568 [debug] [Thread-1 (]: On model.sid_lite.stg_etablissement: Close
+[0m23:48:32.480574 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f8ed994c-c74b-4b8a-a5c2-ce6d732b2f44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002329E99DF90>]}
+[0m23:48:32.482321 [info ] [Thread-1 (]: 1 of 8 OK created sql view model public.stg_etablissement ...................... [[32mCREATE VIEW[0m in 0.17s]
+[0m23:48:32.482321 [debug] [Thread-1 (]: Finished running node model.sid_lite.stg_etablissement
+[0m23:48:32.484074 [debug] [Thread-1 (]: Began running node model.sid_lite.stg_etudiant
+[0m23:48:32.484074 [info ] [Thread-1 (]: 2 of 8 START sql view model public.stg_etudiant ................................ [RUN]
+[0m23:48:32.485247 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sid_lite.stg_etablissement, now model.sid_lite.stg_etudiant)
+[0m23:48:32.485247 [debug] [Thread-1 (]: Began compiling node model.sid_lite.stg_etudiant
+[0m23:48:32.488023 [debug] [Thread-1 (]: Writing injected SQL for node "model.sid_lite.stg_etudiant"
+[0m23:48:32.490593 [debug] [Thread-1 (]: Began executing node model.sid_lite.stg_etudiant
+[0m23:48:32.495713 [debug] [Thread-1 (]: Writing runtime sql for node "model.sid_lite.stg_etudiant"
+[0m23:48:32.497725 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.stg_etudiant"
+[0m23:48:32.498732 [debug] [Thread-1 (]: On model.sid_lite.stg_etudiant: BEGIN
+[0m23:48:32.499237 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:32.538378 [debug] [Thread-1 (]: SQL status: BEGIN in 0.039 seconds
+[0m23:48:32.539597 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.stg_etudiant"
+[0m23:48:32.539597 [debug] [Thread-1 (]: On model.sid_lite.stg_etudiant: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.stg_etudiant"} */
+
+  create view "sid_lite"."public"."stg_etudiant__dbt_tmp"
+    
+    
+  as (
+    
+
+select
+  id_etudiant,
+  prenom,
+  nom,
+  sexe,
+  date_naissance,
+  nationalite,
+  discipline,
+  current_timestamp as load_dts,
+  'ERASMUS' as source
+from "sid_lite"."public"."etudiant"
+  );
+[0m23:48:32.544102 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.004 seconds
+[0m23:48:32.546085 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.stg_etudiant"
+[0m23:48:32.546085 [debug] [Thread-1 (]: On model.sid_lite.stg_etudiant: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.stg_etudiant"} */
+alter table "sid_lite"."public"."stg_etudiant" rename to "stg_etudiant__dbt_backup"
+[0m23:48:32.549625 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m23:48:32.551610 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.stg_etudiant"
+[0m23:48:32.551610 [debug] [Thread-1 (]: On model.sid_lite.stg_etudiant: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.stg_etudiant"} */
+alter table "sid_lite"."public"."stg_etudiant__dbt_tmp" rename to "stg_etudiant"
+[0m23:48:32.551610 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m23:48:32.554457 [debug] [Thread-1 (]: On model.sid_lite.stg_etudiant: COMMIT
+[0m23:48:32.554457 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.stg_etudiant"
+[0m23:48:32.554457 [debug] [Thread-1 (]: On model.sid_lite.stg_etudiant: COMMIT
+[0m23:48:32.598126 [debug] [Thread-1 (]: SQL status: COMMIT in 0.041 seconds
+[0m23:48:32.600839 [debug] [Thread-1 (]: Applying DROP to: "sid_lite"."public"."stg_etudiant__dbt_backup"
+[0m23:48:32.600839 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.stg_etudiant"
+[0m23:48:32.600839 [debug] [Thread-1 (]: On model.sid_lite.stg_etudiant: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.stg_etudiant"} */
+drop view if exists "sid_lite"."public"."stg_etudiant__dbt_backup" cascade
+[0m23:48:32.605358 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m23:48:32.607011 [debug] [Thread-1 (]: On model.sid_lite.stg_etudiant: Close
+[0m23:48:32.607011 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f8ed994c-c74b-4b8a-a5c2-ce6d732b2f44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002329E957090>]}
+[0m23:48:32.610181 [info ] [Thread-1 (]: 2 of 8 OK created sql view model public.stg_etudiant ........................... [[32mCREATE VIEW[0m in 0.12s]
+[0m23:48:32.610181 [debug] [Thread-1 (]: Finished running node model.sid_lite.stg_etudiant
+[0m23:48:32.612227 [debug] [Thread-1 (]: Began running node model.sid_lite.stg_mobilite
+[0m23:48:32.612227 [info ] [Thread-1 (]: 3 of 8 START sql view model public.stg_mobilite ................................ [RUN]
+[0m23:48:32.613731 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sid_lite.stg_etudiant, now model.sid_lite.stg_mobilite)
+[0m23:48:32.613731 [debug] [Thread-1 (]: Began compiling node model.sid_lite.stg_mobilite
+[0m23:48:32.613731 [debug] [Thread-1 (]: Writing injected SQL for node "model.sid_lite.stg_mobilite"
+[0m23:48:32.613731 [debug] [Thread-1 (]: Began executing node model.sid_lite.stg_mobilite
+[0m23:48:32.621997 [debug] [Thread-1 (]: Writing runtime sql for node "model.sid_lite.stg_mobilite"
+[0m23:48:32.624002 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.stg_mobilite"
+[0m23:48:32.624002 [debug] [Thread-1 (]: On model.sid_lite.stg_mobilite: BEGIN
+[0m23:48:32.624002 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:32.663090 [debug] [Thread-1 (]: SQL status: BEGIN in 0.040 seconds
+[0m23:48:32.666236 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.stg_mobilite"
+[0m23:48:32.666236 [debug] [Thread-1 (]: On model.sid_lite.stg_mobilite: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.stg_mobilite"} */
+
+  create view "sid_lite"."public"."stg_mobilite__dbt_tmp"
+    
+    
+  as (
+    SELECT
+    id_mobilite,
+    id_etudiant,
+    oid_etablissement_origine,
+    oid_etablissement_accueil,
+    date_debut,
+    date_fin,
+    type_mobilite,
+    statut_mobilite,
+    current_timestamp as load_dts,
+    'ERASMUS' as source,
+    cast(
+        encode(
+            digest(
+            coalesce(cast(id_mobilite as text),'') || '|' ||
+            coalesce(cast(date_debut as text),'') || '|' ||
+            coalesce(cast(date_fin as text),'') || '|' ||
+            coalesce(cast(type_mobilite as text),'') || '|' ||
+            coalesce(cast(statut_mobilite as text),''),
+            'sha256'
+            ),
+            'hex'
+            ) as text
+        ) as hashdiff_mobilite
+FROM "sid_lite"."public"."mobilite"
+  );
+[0m23:48:32.671543 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.005 seconds
+[0m23:48:32.671543 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.stg_mobilite"
+[0m23:48:32.671543 [debug] [Thread-1 (]: On model.sid_lite.stg_mobilite: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.stg_mobilite"} */
+alter table "sid_lite"."public"."stg_mobilite" rename to "stg_mobilite__dbt_backup"
+[0m23:48:32.671543 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m23:48:32.680951 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.stg_mobilite"
+[0m23:48:32.680951 [debug] [Thread-1 (]: On model.sid_lite.stg_mobilite: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.stg_mobilite"} */
+alter table "sid_lite"."public"."stg_mobilite__dbt_tmp" rename to "stg_mobilite"
+[0m23:48:32.680951 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m23:48:32.680951 [debug] [Thread-1 (]: On model.sid_lite.stg_mobilite: COMMIT
+[0m23:48:32.680951 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.stg_mobilite"
+[0m23:48:32.680951 [debug] [Thread-1 (]: On model.sid_lite.stg_mobilite: COMMIT
+[0m23:48:32.724848 [debug] [Thread-1 (]: SQL status: COMMIT in 0.040 seconds
+[0m23:48:32.727363 [debug] [Thread-1 (]: Applying DROP to: "sid_lite"."public"."stg_mobilite__dbt_backup"
+[0m23:48:32.727363 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.stg_mobilite"
+[0m23:48:32.731373 [debug] [Thread-1 (]: On model.sid_lite.stg_mobilite: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.stg_mobilite"} */
+drop view if exists "sid_lite"."public"."stg_mobilite__dbt_backup" cascade
+[0m23:48:32.731373 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m23:48:32.736262 [debug] [Thread-1 (]: On model.sid_lite.stg_mobilite: Close
+[0m23:48:32.736262 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f8ed994c-c74b-4b8a-a5c2-ce6d732b2f44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002329EB05050>]}
+[0m23:48:32.736262 [info ] [Thread-1 (]: 3 of 8 OK created sql view model public.stg_mobilite ........................... [[32mCREATE VIEW[0m in 0.12s]
+[0m23:48:32.739503 [debug] [Thread-1 (]: Finished running node model.sid_lite.stg_mobilite
+[0m23:48:32.739503 [debug] [Thread-1 (]: Began running node model.sid_lite.vw_fait_mobilite
+[0m23:48:32.739503 [info ] [Thread-1 (]: 4 of 8 START sql view model public.vw_fait_mobilite ............................ [RUN]
+[0m23:48:32.739503 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sid_lite.stg_mobilite, now model.sid_lite.vw_fait_mobilite)
+[0m23:48:32.739503 [debug] [Thread-1 (]: Began compiling node model.sid_lite.vw_fait_mobilite
+[0m23:48:32.745276 [debug] [Thread-1 (]: Writing injected SQL for node "model.sid_lite.vw_fait_mobilite"
+[0m23:48:32.747590 [debug] [Thread-1 (]: Began executing node model.sid_lite.vw_fait_mobilite
+[0m23:48:32.747590 [debug] [Thread-1 (]: Writing runtime sql for node "model.sid_lite.vw_fait_mobilite"
+[0m23:48:32.752526 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.vw_fait_mobilite"
+[0m23:48:32.754378 [debug] [Thread-1 (]: On model.sid_lite.vw_fait_mobilite: BEGIN
+[0m23:48:32.754378 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:32.796406 [debug] [Thread-1 (]: SQL status: BEGIN in 0.043 seconds
+[0m23:48:32.799342 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.vw_fait_mobilite"
+[0m23:48:32.799342 [debug] [Thread-1 (]: On model.sid_lite.vw_fait_mobilite: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.vw_fait_mobilite"} */
+
+  create view "sid_lite"."public"."vw_fait_mobilite__dbt_tmp"
+    
+    
+  as (
+    
+
+select
+    m.id_mobilite,
+    m.date_debut,
+    m.date_fin,
+    m.type_mobilite,
+    m.statut_mobilite,
+    -- Etudiant
+    etu.id_etudiant,
+    etu.nom as nom_etudiant,
+    etu.prenom as prenom_etudiant,
+    etu.date_naissance,
+    etu.sexe,
+    etu.nationalite,
+    etu.discipline,
+    -- Etablissement d'origine
+    e_orig.oid_etablissement as oid_etablissement_origine,
+    e_orig.nom_etablissement as nom_etab_origine,
+    e_orig.pays as pays_etab_origine,
+    e_orig.type_organisation as type_etab_origine,
+    -- Etablissement d'accueil
+    e_acc.oid_etablissement as oid_etablissement_accueil,
+    e_acc.nom_etablissement as nom_etab_accueil,
+    e_acc.pays as pays_etab_accueil,
+    e_acc.type_organisation as type_etab_accueil,
+    -- Techniques
+    m.load_dts,
+    m.source
+from stg_mobilite m
+left join stg_etudiant etu on m.id_etudiant = etu.id_etudiant
+left join stg_etablissement e_orig on m.oid_etablissement_origine = e_orig.oid_etablissement
+left join stg_etablissement e_acc on m.oid_etablissement_accueil = e_acc.oid_etablissement
+  );
+[0m23:48:32.808586 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.009 seconds
+[0m23:48:32.811186 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.vw_fait_mobilite"
+[0m23:48:32.812941 [debug] [Thread-1 (]: On model.sid_lite.vw_fait_mobilite: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.vw_fait_mobilite"} */
+alter table "sid_lite"."public"."vw_fait_mobilite__dbt_tmp" rename to "vw_fait_mobilite"
+[0m23:48:32.814008 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m23:48:32.814008 [debug] [Thread-1 (]: On model.sid_lite.vw_fait_mobilite: COMMIT
+[0m23:48:32.814008 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.vw_fait_mobilite"
+[0m23:48:32.814008 [debug] [Thread-1 (]: On model.sid_lite.vw_fait_mobilite: COMMIT
+[0m23:48:32.857521 [debug] [Thread-1 (]: SQL status: COMMIT in 0.040 seconds
+[0m23:48:32.858596 [debug] [Thread-1 (]: Applying DROP to: "sid_lite"."public"."vw_fait_mobilite__dbt_backup"
+[0m23:48:32.858596 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.vw_fait_mobilite"
+[0m23:48:32.858596 [debug] [Thread-1 (]: On model.sid_lite.vw_fait_mobilite: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.vw_fait_mobilite"} */
+drop view if exists "sid_lite"."public"."vw_fait_mobilite__dbt_backup" cascade
+[0m23:48:32.858596 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m23:48:32.863123 [debug] [Thread-1 (]: On model.sid_lite.vw_fait_mobilite: Close
+[0m23:48:32.863123 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f8ed994c-c74b-4b8a-a5c2-ce6d732b2f44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002329EB06C10>]}
+[0m23:48:32.863123 [info ] [Thread-1 (]: 4 of 8 OK created sql view model public.vw_fait_mobilite ....................... [[32mCREATE VIEW[0m in 0.12s]
+[0m23:48:32.863123 [debug] [Thread-1 (]: Finished running node model.sid_lite.vw_fait_mobilite
+[0m23:48:32.863123 [debug] [Thread-1 (]: Began running node model.sid_lite.hub_etablissement
+[0m23:48:32.863123 [info ] [Thread-1 (]: 5 of 8 START sql table model public.hub_etablissement .......................... [RUN]
+[0m23:48:32.868848 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sid_lite.vw_fait_mobilite, now model.sid_lite.hub_etablissement)
+[0m23:48:32.870172 [debug] [Thread-1 (]: Began compiling node model.sid_lite.hub_etablissement
+[0m23:48:32.889913 [info ] [Thread-1 (]: 23:48:32 + Loading sid_lite.public.hub_etablissement from 1 source(s)
+[0m23:48:32.940130 [debug] [Thread-1 (]: Writing injected SQL for node "model.sid_lite.hub_etablissement"
+[0m23:48:32.940130 [debug] [Thread-1 (]: Began executing node model.sid_lite.hub_etablissement
+[0m23:48:32.958519 [debug] [Thread-1 (]: Writing runtime sql for node "model.sid_lite.hub_etablissement"
+[0m23:48:32.961542 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.hub_etablissement"
+[0m23:48:32.961542 [debug] [Thread-1 (]: On model.sid_lite.hub_etablissement: BEGIN
+[0m23:48:32.962956 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:33.002035 [debug] [Thread-1 (]: SQL status: BEGIN in 0.040 seconds
+[0m23:48:33.002035 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.hub_etablissement"
+[0m23:48:33.002035 [debug] [Thread-1 (]: On model.sid_lite.hub_etablissement: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.hub_etablissement"} */
+
+  
+    
+
+  create  table "sid_lite"."public"."hub_etablissement__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+-- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT DISTINCT ON (rr.oid_etablissement) rr.oid_etablissement, rr.load_dts, rr.source
+    FROM "sid_lite"."public"."stg_etablissement" AS rr
+    WHERE rr.oid_etablissement IS NOT NULL
+    ORDER BY rr.oid_etablissement, rr.load_dts
+),
+
+records_to_insert AS (
+    SELECT a.oid_etablissement, a.load_dts, a.source
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert
+  );
+  
+[0m23:48:33.010235 [debug] [Thread-1 (]: SQL status: SELECT 500 in 0.006 seconds
+[0m23:48:33.017714 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.hub_etablissement"
+[0m23:48:33.017714 [debug] [Thread-1 (]: On model.sid_lite.hub_etablissement: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.hub_etablissement"} */
+alter table "sid_lite"."public"."hub_etablissement" rename to "hub_etablissement__dbt_backup"
+[0m23:48:33.019257 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m23:48:33.022120 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.hub_etablissement"
+[0m23:48:33.023852 [debug] [Thread-1 (]: On model.sid_lite.hub_etablissement: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.hub_etablissement"} */
+alter table "sid_lite"."public"."hub_etablissement__dbt_tmp" rename to "hub_etablissement"
+[0m23:48:33.023852 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m23:48:33.025399 [debug] [Thread-1 (]: On model.sid_lite.hub_etablissement: COMMIT
+[0m23:48:33.025399 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.hub_etablissement"
+[0m23:48:33.026923 [debug] [Thread-1 (]: On model.sid_lite.hub_etablissement: COMMIT
+[0m23:48:33.051809 [debug] [Thread-1 (]: SQL status: COMMIT in 0.026 seconds
+[0m23:48:33.058538 [debug] [Thread-1 (]: Applying DROP to: "sid_lite"."public"."hub_etablissement__dbt_backup"
+[0m23:48:33.060080 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.hub_etablissement"
+[0m23:48:33.060080 [debug] [Thread-1 (]: On model.sid_lite.hub_etablissement: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.hub_etablissement"} */
+drop table if exists "sid_lite"."public"."hub_etablissement__dbt_backup" cascade
+[0m23:48:33.060080 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.005 seconds
+[0m23:48:33.068214 [debug] [Thread-1 (]: On model.sid_lite.hub_etablissement: Close
+[0m23:48:33.068214 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f8ed994c-c74b-4b8a-a5c2-ce6d732b2f44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002329E6A5B90>]}
+[0m23:48:33.068214 [info ] [Thread-1 (]: 5 of 8 OK created sql table model public.hub_etablissement ..................... [[32mSELECT 500[0m in 0.20s]
+[0m23:48:33.071773 [debug] [Thread-1 (]: Finished running node model.sid_lite.hub_etablissement
+[0m23:48:33.071773 [debug] [Thread-1 (]: Began running node model.sid_lite.hub_etudiant
+[0m23:48:33.071773 [info ] [Thread-1 (]: 6 of 8 START sql table model public.hub_etudiant ............................... [RUN]
+[0m23:48:33.074020 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sid_lite.hub_etablissement, now model.sid_lite.hub_etudiant)
+[0m23:48:33.074020 [debug] [Thread-1 (]: Began compiling node model.sid_lite.hub_etudiant
+[0m23:48:33.077890 [info ] [Thread-1 (]: 23:48:33 + Loading sid_lite.public.hub_etudiant from 1 source(s)
+[0m23:48:33.081781 [debug] [Thread-1 (]: Writing injected SQL for node "model.sid_lite.hub_etudiant"
+[0m23:48:33.083257 [debug] [Thread-1 (]: Began executing node model.sid_lite.hub_etudiant
+[0m23:48:33.179731 [debug] [Thread-1 (]: Writing runtime sql for node "model.sid_lite.hub_etudiant"
+[0m23:48:33.179731 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.hub_etudiant"
+[0m23:48:33.181736 [debug] [Thread-1 (]: On model.sid_lite.hub_etudiant: BEGIN
+[0m23:48:33.182563 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:33.230252 [debug] [Thread-1 (]: SQL status: BEGIN in 0.048 seconds
+[0m23:48:33.230252 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.hub_etudiant"
+[0m23:48:33.230252 [debug] [Thread-1 (]: On model.sid_lite.hub_etudiant: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.hub_etudiant"} */
+
+  
+    
+
+  create  table "sid_lite"."public"."hub_etudiant__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+-- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT DISTINCT ON (rr.id_etudiant) rr.id_etudiant, rr.load_dts, rr.source
+    FROM "sid_lite"."public"."stg_etudiant" AS rr
+    WHERE rr.id_etudiant IS NOT NULL
+    ORDER BY rr.id_etudiant, rr.load_dts
+),
+
+records_to_insert AS (
+    SELECT a.id_etudiant, a.load_dts, a.source
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert
+  );
+  
+[0m23:48:33.237252 [debug] [Thread-1 (]: SQL status: SELECT 500 in 0.006 seconds
+[0m23:48:33.240954 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.hub_etudiant"
+[0m23:48:33.240954 [debug] [Thread-1 (]: On model.sid_lite.hub_etudiant: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.hub_etudiant"} */
+alter table "sid_lite"."public"."hub_etudiant" rename to "hub_etudiant__dbt_backup"
+[0m23:48:33.240954 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m23:48:33.240954 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.hub_etudiant"
+[0m23:48:33.240954 [debug] [Thread-1 (]: On model.sid_lite.hub_etudiant: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.hub_etudiant"} */
+alter table "sid_lite"."public"."hub_etudiant__dbt_tmp" rename to "hub_etudiant"
+[0m23:48:33.240954 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m23:48:33.247575 [debug] [Thread-1 (]: On model.sid_lite.hub_etudiant: COMMIT
+[0m23:48:33.249327 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.hub_etudiant"
+[0m23:48:33.249327 [debug] [Thread-1 (]: On model.sid_lite.hub_etudiant: COMMIT
+[0m23:48:33.250731 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m23:48:33.252476 [debug] [Thread-1 (]: Applying DROP to: "sid_lite"."public"."hub_etudiant__dbt_backup"
+[0m23:48:33.252476 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.hub_etudiant"
+[0m23:48:33.252476 [debug] [Thread-1 (]: On model.sid_lite.hub_etudiant: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.hub_etudiant"} */
+drop table if exists "sid_lite"."public"."hub_etudiant__dbt_backup" cascade
+[0m23:48:33.257525 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.003 seconds
+[0m23:48:33.259029 [debug] [Thread-1 (]: On model.sid_lite.hub_etudiant: Close
+[0m23:48:33.259029 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f8ed994c-c74b-4b8a-a5c2-ce6d732b2f44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002329EB9FDD0>]}
+[0m23:48:33.260608 [info ] [Thread-1 (]: 6 of 8 OK created sql table model public.hub_etudiant .......................... [[32mSELECT 500[0m in 0.19s]
+[0m23:48:33.260608 [debug] [Thread-1 (]: Finished running node model.sid_lite.hub_etudiant
+[0m23:48:33.262592 [debug] [Thread-1 (]: Began running node model.sid_lite.link_mobilite
+[0m23:48:33.262592 [info ] [Thread-1 (]: 7 of 8 START sql incremental model public.link_mobilite ........................ [RUN]
+[0m23:48:33.262592 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sid_lite.hub_etudiant, now model.sid_lite.link_mobilite)
+[0m23:48:33.262592 [debug] [Thread-1 (]: Began compiling node model.sid_lite.link_mobilite
+[0m23:48:33.272685 [info ] [Thread-1 (]: 23:48:33 + Loading sid_lite.public.link_mobilite from 1 source(s)
+[0m23:48:33.282419 [debug] [Thread-1 (]: Writing injected SQL for node "model.sid_lite.link_mobilite"
+[0m23:48:33.288926 [debug] [Thread-1 (]: Began executing node model.sid_lite.link_mobilite
+[0m23:48:33.315162 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.link_mobilite"
+[0m23:48:33.315162 [debug] [Thread-1 (]: On model.sid_lite.link_mobilite: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.link_mobilite"} */
+
+    
+  
+    
+
+  create temporary table "link_mobilite__dbt_tmp234833313484"
+  
+  
+    as
+  
+  (
+    -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+  SELECT * FROM (
+    SELECT rr.id_mobilite, rr.id_etudiant, rr.oid_etablissement_origine, rr.oid_etablissement_accueil, rr.load_dts, rr.source,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.id_mobilite
+               ORDER BY rr.load_dts
+           ) AS row_number
+    FROM "sid_lite"."public"."stg_mobilite" AS rr
+    WHERE rr.id_mobilite IS NOT NULL
+    AND rr.id_etudiant IS NOT NULL
+    AND rr.oid_etablissement_origine IS NOT NULL
+    AND rr.oid_etablissement_accueil IS NOT NULL
+  ) as l
+  WHERE row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.id_mobilite, a.id_etudiant, a.oid_etablissement_origine, a.oid_etablissement_accueil, a.load_dts, a.source
+    FROM row_rank_1 AS a
+    LEFT JOIN "sid_lite"."public"."link_mobilite" AS d
+    ON a.id_mobilite = d.id_mobilite
+    WHERE d.id_mobilite IS NULL
+)
+
+SELECT * FROM records_to_insert
+  );
+  
+  
+[0m23:48:33.315162 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:33.362333 [debug] [Thread-1 (]: SQL status: SELECT 0 in 0.046 seconds
+[0m23:48:33.375966 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.link_mobilite"
+[0m23:48:33.375966 [debug] [Thread-1 (]: On model.sid_lite.link_mobilite: BEGIN
+[0m23:48:33.379041 [debug] [Thread-1 (]: SQL status: BEGIN in 0.002 seconds
+[0m23:48:33.379041 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.link_mobilite"
+[0m23:48:33.379041 [debug] [Thread-1 (]: On model.sid_lite.link_mobilite: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.link_mobilite"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'link_mobilite__dbt_tmp234833313484'
+        
+      order by ordinal_position
+
+  
+[0m23:48:33.389706 [debug] [Thread-1 (]: SQL status: SELECT 6 in 0.010 seconds
+[0m23:48:33.396306 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.link_mobilite"
+[0m23:48:33.397345 [debug] [Thread-1 (]: On model.sid_lite.link_mobilite: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.link_mobilite"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "sid_lite".INFORMATION_SCHEMA.columns
+      where table_name = 'link_mobilite'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+[0m23:48:33.400212 [debug] [Thread-1 (]: SQL status: SELECT 6 in 0.002 seconds
+[0m23:48:33.406413 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.link_mobilite"
+[0m23:48:33.406413 [debug] [Thread-1 (]: On model.sid_lite.link_mobilite: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.link_mobilite"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "sid_lite".INFORMATION_SCHEMA.columns
+      where table_name = 'link_mobilite'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+[0m23:48:33.409522 [debug] [Thread-1 (]: SQL status: SELECT 6 in 0.002 seconds
+[0m23:48:33.417317 [debug] [Thread-1 (]: Writing runtime sql for node "model.sid_lite.link_mobilite"
+[0m23:48:33.418866 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.link_mobilite"
+[0m23:48:33.418866 [debug] [Thread-1 (]: On model.sid_lite.link_mobilite: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.link_mobilite"} */
+
+      insert into "sid_lite"."public"."link_mobilite" ("id_mobilite", "id_etudiant", "oid_etablissement_origine", "oid_etablissement_accueil", "load_dts", "source")
+    (
+        select "id_mobilite", "id_etudiant", "oid_etablissement_origine", "oid_etablissement_accueil", "load_dts", "source"
+        from "link_mobilite__dbt_tmp234833313484"
+    )
+
+
+  
+[0m23:48:33.420409 [debug] [Thread-1 (]: SQL status: INSERT 0 0 in 0.001 seconds
+[0m23:48:33.421961 [debug] [Thread-1 (]: On model.sid_lite.link_mobilite: COMMIT
+[0m23:48:33.423501 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.link_mobilite"
+[0m23:48:33.423501 [debug] [Thread-1 (]: On model.sid_lite.link_mobilite: COMMIT
+[0m23:48:33.448393 [debug] [Thread-1 (]: SQL status: COMMIT in 0.023 seconds
+[0m23:48:33.448393 [debug] [Thread-1 (]: On model.sid_lite.link_mobilite: Close
+[0m23:48:33.450401 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f8ed994c-c74b-4b8a-a5c2-ce6d732b2f44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002329C1E9F10>]}
+[0m23:48:33.452407 [info ] [Thread-1 (]: 7 of 8 OK created sql incremental model public.link_mobilite ................... [[32mINSERT 0 0[0m in 0.19s]
+[0m23:48:33.456423 [debug] [Thread-1 (]: Finished running node model.sid_lite.link_mobilite
+[0m23:48:33.456423 [debug] [Thread-1 (]: Began running node model.sid_lite.sat_mobilite
+[0m23:48:33.458429 [info ] [Thread-1 (]: 8 of 8 START sql incremental model public.sat_mobilite ......................... [RUN]
+[0m23:48:33.459435 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sid_lite.link_mobilite, now model.sid_lite.sat_mobilite)
+[0m23:48:33.460441 [debug] [Thread-1 (]: Began compiling node model.sid_lite.sat_mobilite
+[0m23:48:33.516239 [debug] [Thread-1 (]: Writing injected SQL for node "model.sid_lite.sat_mobilite"
+[0m23:48:33.516239 [debug] [Thread-1 (]: Began executing node model.sid_lite.sat_mobilite
+[0m23:48:33.519152 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.sat_mobilite"
+[0m23:48:33.522139 [debug] [Thread-1 (]: On model.sid_lite.sat_mobilite: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.sat_mobilite"} */
+
+    
+  
+    
+
+  create temporary table "sat_mobilite__dbt_tmp234833519152"
+  
+  
+    as
+  
+  (
+    
+
+-- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.id_mobilite, a.hashdiff_mobilite, a.date_debut, a.date_fin, a.type_mobilite, a.statut_mobilite, a.load_dts, a.source
+    FROM "sid_lite"."public"."stg_mobilite" AS a
+    WHERE a.id_mobilite IS NOT NULL
+),
+
+latest_records AS (
+    SELECT b.id_mobilite, b.hashdiff_mobilite, b.load_dts
+    FROM (
+        SELECT current_records.id_mobilite, current_records.hashdiff_mobilite, current_records.load_dts,
+            ROW_NUMBER() OVER (
+               PARTITION BY current_records.id_mobilite
+               ORDER BY current_records.load_dts DESC
+            ) AS rank
+        FROM "sid_lite"."public"."sat_mobilite" AS current_records
+            JOIN (
+                SELECT DISTINCT source_data.id_mobilite
+                FROM source_data
+            ) AS source_records
+                ON source_records.id_mobilite = current_records.id_mobilite
+    ) AS b
+    WHERE b.rank = 1
+),
+
+unique_source_records AS (
+    SELECT
+        b.id_mobilite, b.hashdiff_mobilite, b.date_debut, b.date_fin, b.type_mobilite, b.statut_mobilite, b.load_dts, b.source
+    FROM (
+        SELECT
+            sd.id_mobilite, sd.hashdiff_mobilite, sd.date_debut, sd.date_fin, sd.type_mobilite, sd.statut_mobilite, sd.load_dts, sd.source,
+            LAG(
+                sd.hashdiff_mobilite,
+                1,
+                COALESCE(lr.hashdiff_mobilite,
+                         'FFFFFFFF')
+            ) OVER (
+                PARTITION BY sd.id_mobilite
+                ORDER BY sd.load_dts ASC
+            ) AS prev_hashdiff
+        FROM source_data AS sd
+        LEFT OUTER JOIN latest_records AS lr
+            ON sd.id_mobilite = lr.id_mobilite
+        ) AS b
+    WHERE b.hashdiff_mobilite != b.prev_hashdiff
+),
+
+records_to_insert AS (
+    SELECT usr.id_mobilite, usr.hashdiff_mobilite, usr.date_debut, usr.date_fin, usr.type_mobilite, usr.statut_mobilite, usr.load_dts, usr.source
+    FROM unique_source_records AS usr
+)
+
+SELECT * FROM records_to_insert
+  );
+  
+  
+[0m23:48:33.522139 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:33.572188 [debug] [Thread-1 (]: SQL status: SELECT 0 in 0.052 seconds
+[0m23:48:33.576529 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.sat_mobilite"
+[0m23:48:33.576529 [debug] [Thread-1 (]: On model.sid_lite.sat_mobilite: BEGIN
+[0m23:48:33.580540 [debug] [Thread-1 (]: SQL status: BEGIN in 0.001 seconds
+[0m23:48:33.580540 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.sat_mobilite"
+[0m23:48:33.580540 [debug] [Thread-1 (]: On model.sid_lite.sat_mobilite: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.sat_mobilite"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'sat_mobilite__dbt_tmp234833519152'
+        
+      order by ordinal_position
+
+  
+[0m23:48:33.588891 [debug] [Thread-1 (]: SQL status: SELECT 8 in 0.010 seconds
+[0m23:48:33.595146 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.sat_mobilite"
+[0m23:48:33.596915 [debug] [Thread-1 (]: On model.sid_lite.sat_mobilite: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.sat_mobilite"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "sid_lite".INFORMATION_SCHEMA.columns
+      where table_name = 'sat_mobilite'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+[0m23:48:33.596915 [debug] [Thread-1 (]: SQL status: SELECT 8 in 0.003 seconds
+[0m23:48:33.596915 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.sat_mobilite"
+[0m23:48:33.596915 [debug] [Thread-1 (]: On model.sid_lite.sat_mobilite: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.sat_mobilite"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "sid_lite".INFORMATION_SCHEMA.columns
+      where table_name = 'sat_mobilite'
+        
+        and table_schema = 'public'
+        
+      order by ordinal_position
+
+  
+[0m23:48:33.606931 [debug] [Thread-1 (]: SQL status: SELECT 8 in 0.003 seconds
+[0m23:48:33.609077 [debug] [Thread-1 (]: Writing runtime sql for node "model.sid_lite.sat_mobilite"
+[0m23:48:33.609077 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.sat_mobilite"
+[0m23:48:33.609077 [debug] [Thread-1 (]: On model.sid_lite.sat_mobilite: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "model.sid_lite.sat_mobilite"} */
+
+      insert into "sid_lite"."public"."sat_mobilite" ("id_mobilite", "hashdiff_mobilite", "date_debut", "date_fin", "type_mobilite", "statut_mobilite", "load_dts", "source")
+    (
+        select "id_mobilite", "hashdiff_mobilite", "date_debut", "date_fin", "type_mobilite", "statut_mobilite", "load_dts", "source"
+        from "sat_mobilite__dbt_tmp234833519152"
+    )
+
+
+  
+[0m23:48:33.609077 [debug] [Thread-1 (]: SQL status: INSERT 0 0 in 0.000 seconds
+[0m23:48:33.609077 [debug] [Thread-1 (]: On model.sid_lite.sat_mobilite: COMMIT
+[0m23:48:33.613395 [debug] [Thread-1 (]: Using postgres connection "model.sid_lite.sat_mobilite"
+[0m23:48:33.613395 [debug] [Thread-1 (]: On model.sid_lite.sat_mobilite: COMMIT
+[0m23:48:33.655155 [debug] [Thread-1 (]: SQL status: COMMIT in 0.041 seconds
+[0m23:48:33.657947 [debug] [Thread-1 (]: On model.sid_lite.sat_mobilite: Close
+[0m23:48:33.659526 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f8ed994c-c74b-4b8a-a5c2-ce6d732b2f44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002329E8F5B50>]}
+[0m23:48:33.659526 [info ] [Thread-1 (]: 8 of 8 OK created sql incremental model public.sat_mobilite .................... [[32mINSERT 0 0[0m in 0.20s]
+[0m23:48:33.660756 [debug] [Thread-1 (]: Finished running node model.sid_lite.sat_mobilite
+[0m23:48:33.663525 [debug] [MainThread]: Using postgres connection "master"
+[0m23:48:33.663525 [debug] [MainThread]: On master: BEGIN
+[0m23:48:33.663525 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:48:33.707528 [debug] [MainThread]: SQL status: BEGIN in 0.043 seconds
+[0m23:48:33.707528 [debug] [MainThread]: On master: COMMIT
+[0m23:48:33.707528 [debug] [MainThread]: Using postgres connection "master"
+[0m23:48:33.707528 [debug] [MainThread]: On master: COMMIT
+[0m23:48:33.707528 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m23:48:33.707528 [debug] [MainThread]: On master: Close
+[0m23:48:33.710129 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:48:33.710129 [debug] [MainThread]: Connection 'list_sid_lite' was properly closed.
+[0m23:48:33.710129 [debug] [MainThread]: Connection 'list_sid_lite_public' was properly closed.
+[0m23:48:33.710129 [debug] [MainThread]: Connection 'model.sid_lite.sat_mobilite' was properly closed.
+[0m23:48:33.710129 [info ] [MainThread]: 
+[0m23:48:33.713189 [info ] [MainThread]: Finished running 2 incremental models, 2 table models, 4 view models in 0 hours 0 minutes and 1.75 seconds (1.75s).
+[0m23:48:33.714194 [debug] [MainThread]: Command end result
+[0m23:48:33.762073 [debug] [MainThread]: Wrote artifact WritableManifest to D:\GitHub\erasmus-sid-lite\target\manifest.json
+[0m23:48:33.762073 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\GitHub\erasmus-sid-lite\target\semantic_manifest.json
+[0m23:48:33.773582 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\GitHub\erasmus-sid-lite\target\run_results.json
+[0m23:48:33.773582 [info ] [MainThread]: 
+[0m23:48:33.776323 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:48:33.776323 [info ] [MainThread]: 
+[0m23:48:33.777405 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=8
+[0m23:48:33.778414 [debug] [MainThread]: Command `dbt run` succeeded at 23:48:33.777405 after 3.21 seconds
+[0m23:48:33.778414 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023295CBFCD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023295CBF110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023299BE1F10>]}
+[0m23:48:33.778414 [debug] [MainThread]: Flushing usage events
+[0m23:48:34.310312 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:48:41.971517 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001290EADE0D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001290EB20F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001290EB23B90>]}
+
+
+============================== 23:48:41.977393 | 6444ec66-4bfe-421b-aadd-562065ef8566 ==============================
+[0m23:48:41.977393 [info ] [MainThread]: Running with dbt=1.10.4
+[0m23:48:41.977393 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'D:\\GitHub\\erasmus-sid-lite\\logs', 'profiles_dir': 'C:\\Users\\jpvt\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt test', 'send_anonymous_usage_stats': 'True'}
+[0m23:48:42.165492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6444ec66-4bfe-421b-aadd-562065ef8566', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001290FCE4950>]}
+[0m23:48:42.239545 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6444ec66-4bfe-421b-aadd-562065ef8566', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001290B39EF50>]}
+[0m23:48:42.239545 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m23:48:42.465107 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m23:48:42.679545 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:48:42.679545 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:48:42.712051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6444ec66-4bfe-421b-aadd-562065ef8566', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001290FD68150>]}
+[0m23:48:42.889102 [debug] [MainThread]: Wrote artifact WritableManifest to D:\GitHub\erasmus-sid-lite\target\manifest.json
+[0m23:48:42.893709 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\GitHub\erasmus-sid-lite\target\semantic_manifest.json
+[0m23:48:42.928562 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6444ec66-4bfe-421b-aadd-562065ef8566', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001290FC08B50>]}
+[0m23:48:42.928562 [info ] [MainThread]: Found 8 models, 3 seeds, 16 data tests, 822 macros
+[0m23:48:42.928562 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6444ec66-4bfe-421b-aadd-562065ef8566', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001290D300810>]}
+[0m23:48:42.928562 [info ] [MainThread]: 
+[0m23:48:42.933592 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:48:42.933592 [info ] [MainThread]: 
+[0m23:48:42.933592 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m23:48:42.941736 [debug] [ThreadPool]: Acquiring new postgres connection 'list_sid_lite_public'
+[0m23:48:43.118943 [debug] [ThreadPool]: Using postgres connection "list_sid_lite_public"
+[0m23:48:43.151867 [debug] [ThreadPool]: On list_sid_lite_public: BEGIN
+[0m23:48:43.151867 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:48:43.214389 [debug] [ThreadPool]: SQL status: BEGIN in 0.061 seconds
+[0m23:48:43.214389 [debug] [ThreadPool]: Using postgres connection "list_sid_lite_public"
+[0m23:48:43.215410 [debug] [ThreadPool]: On list_sid_lite_public: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "connection_name": "list_sid_lite_public"} */
+select
+      'sid_lite' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'sid_lite' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'sid_lite' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m23:48:43.222470 [debug] [ThreadPool]: SQL status: SELECT 11 in 0.006 seconds
+[0m23:48:43.222470 [debug] [ThreadPool]: On list_sid_lite_public: ROLLBACK
+[0m23:48:43.222470 [debug] [ThreadPool]: On list_sid_lite_public: Close
+[0m23:48:43.232209 [debug] [MainThread]: Using postgres connection "master"
+[0m23:48:43.232209 [debug] [MainThread]: On master: BEGIN
+[0m23:48:43.233745 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:48:43.273053 [debug] [MainThread]: SQL status: BEGIN in 0.040 seconds
+[0m23:48:43.274637 [debug] [MainThread]: Using postgres connection "master"
+[0m23:48:43.275643 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m23:48:43.276651 [debug] [MainThread]: SQL status: SELECT 6 in 0.005 seconds
+[0m23:48:43.284024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6444ec66-4bfe-421b-aadd-562065ef8566', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001290E7B21D0>]}
+[0m23:48:43.284024 [debug] [MainThread]: On master: ROLLBACK
+[0m23:48:43.284024 [debug] [MainThread]: Using postgres connection "master"
+[0m23:48:43.284024 [debug] [MainThread]: On master: BEGIN
+[0m23:48:43.287474 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m23:48:43.287474 [debug] [MainThread]: On master: COMMIT
+[0m23:48:43.287474 [debug] [MainThread]: Using postgres connection "master"
+[0m23:48:43.287474 [debug] [MainThread]: On master: COMMIT
+[0m23:48:43.289481 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m23:48:43.289481 [debug] [MainThread]: On master: Close
+[0m23:48:43.294343 [debug] [Thread-1 (]: Began running node test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee
+[0m23:48:43.294343 [info ] [Thread-1 (]: 1 of 16 START test not_null_hub_etablissement_oid_etablissement ................ [RUN]
+[0m23:48:43.294343 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee'
+[0m23:48:43.294343 [debug] [Thread-1 (]: Began compiling node test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee
+[0m23:48:43.308538 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee"
+[0m23:48:43.315092 [debug] [Thread-1 (]: Began executing node test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee
+[0m23:48:43.331263 [debug] [Thread-1 (]: Writing runtime sql for node "test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee"
+[0m23:48:43.331263 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee"
+[0m23:48:43.333408 [debug] [Thread-1 (]: On test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee: BEGIN
+[0m23:48:43.333408 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:48:43.373608 [debug] [Thread-1 (]: SQL status: BEGIN in 0.039 seconds
+[0m23:48:43.373608 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee"
+[0m23:48:43.374717 [debug] [Thread-1 (]: On test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select oid_etablissement
+from "sid_lite"."public"."hub_etablissement"
+where oid_etablissement is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:48:43.376358 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m23:48:43.380114 [debug] [Thread-1 (]: On test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee: ROLLBACK
+[0m23:48:43.380114 [debug] [Thread-1 (]: On test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee: Close
+[0m23:48:43.381862 [info ] [Thread-1 (]: 1 of 16 PASS not_null_hub_etablissement_oid_etablissement ...................... [[32mPASS[0m in 0.09s]
+[0m23:48:43.381862 [debug] [Thread-1 (]: Finished running node test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee
+[0m23:48:43.384285 [debug] [Thread-1 (]: Began running node test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22
+[0m23:48:43.384285 [info ] [Thread-1 (]: 2 of 16 START test not_null_hub_etudiant_id_etudiant ........................... [RUN]
+[0m23:48:43.384285 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee, now test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22)
+[0m23:48:43.385961 [debug] [Thread-1 (]: Began compiling node test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22
+[0m23:48:43.390861 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22"
+[0m23:48:43.390861 [debug] [Thread-1 (]: Began executing node test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22
+[0m23:48:43.393004 [debug] [Thread-1 (]: Writing runtime sql for node "test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22"
+[0m23:48:43.395471 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22"
+[0m23:48:43.395471 [debug] [Thread-1 (]: On test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22: BEGIN
+[0m23:48:43.395471 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:43.440679 [debug] [Thread-1 (]: SQL status: BEGIN in 0.043 seconds
+[0m23:48:43.440679 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22"
+[0m23:48:43.440679 [debug] [Thread-1 (]: On test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id_etudiant
+from "sid_lite"."public"."hub_etudiant"
+where id_etudiant is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:48:43.440679 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:48:43.440679 [debug] [Thread-1 (]: On test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22: ROLLBACK
+[0m23:48:43.440679 [debug] [Thread-1 (]: On test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22: Close
+[0m23:48:43.446874 [info ] [Thread-1 (]: 2 of 16 PASS not_null_hub_etudiant_id_etudiant ................................. [[32mPASS[0m in 0.06s]
+[0m23:48:43.448501 [debug] [Thread-1 (]: Finished running node test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22
+[0m23:48:43.448501 [debug] [Thread-1 (]: Began running node test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab
+[0m23:48:43.449995 [info ] [Thread-1 (]: 3 of 16 START test not_null_link_mobilite_id_mobilite .......................... [RUN]
+[0m23:48:43.449995 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22, now test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab)
+[0m23:48:43.451346 [debug] [Thread-1 (]: Began compiling node test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab
+[0m23:48:43.455097 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab"
+[0m23:48:43.455097 [debug] [Thread-1 (]: Began executing node test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab
+[0m23:48:43.455097 [debug] [Thread-1 (]: Writing runtime sql for node "test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab"
+[0m23:48:43.455097 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab"
+[0m23:48:43.455097 [debug] [Thread-1 (]: On test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab: BEGIN
+[0m23:48:43.455097 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:43.501390 [debug] [Thread-1 (]: SQL status: BEGIN in 0.039 seconds
+[0m23:48:43.501390 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab"
+[0m23:48:43.501390 [debug] [Thread-1 (]: On test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id_mobilite
+from "sid_lite"."public"."link_mobilite"
+where id_mobilite is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:48:43.503771 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m23:48:43.506982 [debug] [Thread-1 (]: On test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab: ROLLBACK
+[0m23:48:43.506982 [debug] [Thread-1 (]: On test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab: Close
+[0m23:48:43.506982 [info ] [Thread-1 (]: 3 of 16 PASS not_null_link_mobilite_id_mobilite ................................ [[32mPASS[0m in 0.06s]
+[0m23:48:43.509426 [debug] [Thread-1 (]: Finished running node test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab
+[0m23:48:43.511209 [debug] [Thread-1 (]: Began running node test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343
+[0m23:48:43.511209 [info ] [Thread-1 (]: 4 of 16 START test not_null_sat_mobilite_id_mobilite ........................... [RUN]
+[0m23:48:43.512217 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab, now test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343)
+[0m23:48:43.512217 [debug] [Thread-1 (]: Began compiling node test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343
+[0m23:48:43.516707 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343"
+[0m23:48:43.516707 [debug] [Thread-1 (]: Began executing node test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343
+[0m23:48:43.519778 [debug] [Thread-1 (]: Writing runtime sql for node "test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343"
+[0m23:48:43.521514 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343"
+[0m23:48:43.523047 [debug] [Thread-1 (]: On test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343: BEGIN
+[0m23:48:43.523047 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:43.562767 [debug] [Thread-1 (]: SQL status: BEGIN in 0.039 seconds
+[0m23:48:43.562767 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343"
+[0m23:48:43.562767 [debug] [Thread-1 (]: On test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id_mobilite
+from "sid_lite"."public"."sat_mobilite"
+where id_mobilite is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:48:43.565573 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m23:48:43.568308 [debug] [Thread-1 (]: On test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343: ROLLBACK
+[0m23:48:43.569321 [debug] [Thread-1 (]: On test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343: Close
+[0m23:48:43.570864 [info ] [Thread-1 (]: 4 of 16 PASS not_null_sat_mobilite_id_mobilite ................................. [[32mPASS[0m in 0.06s]
+[0m23:48:43.570864 [debug] [Thread-1 (]: Finished running node test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343
+[0m23:48:43.570864 [debug] [Thread-1 (]: Began running node test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69
+[0m23:48:43.570864 [info ] [Thread-1 (]: 5 of 16 START test not_null_stg_etablissement_oid_etablissement ................ [RUN]
+[0m23:48:43.574097 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343, now test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69)
+[0m23:48:43.574097 [debug] [Thread-1 (]: Began compiling node test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69
+[0m23:48:43.577850 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69"
+[0m23:48:43.577850 [debug] [Thread-1 (]: Began executing node test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69
+[0m23:48:43.581862 [debug] [Thread-1 (]: Writing runtime sql for node "test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69"
+[0m23:48:43.581862 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69"
+[0m23:48:43.581862 [debug] [Thread-1 (]: On test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69: BEGIN
+[0m23:48:43.581862 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:43.618889 [debug] [Thread-1 (]: SQL status: BEGIN in 0.037 seconds
+[0m23:48:43.620753 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69"
+[0m23:48:43.620753 [debug] [Thread-1 (]: On test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select oid_etablissement
+from "sid_lite"."public"."stg_etablissement"
+where oid_etablissement is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:48:43.622505 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m23:48:43.624725 [debug] [Thread-1 (]: On test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69: ROLLBACK
+[0m23:48:43.624725 [debug] [Thread-1 (]: On test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69: Close
+[0m23:48:43.627144 [info ] [Thread-1 (]: 5 of 16 PASS not_null_stg_etablissement_oid_etablissement ...................... [[32mPASS[0m in 0.05s]
+[0m23:48:43.627144 [debug] [Thread-1 (]: Finished running node test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69
+[0m23:48:43.628283 [debug] [Thread-1 (]: Began running node test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69
+[0m23:48:43.628283 [info ] [Thread-1 (]: 6 of 16 START test not_null_stg_etudiant_id_etudiant ........................... [RUN]
+[0m23:48:43.628283 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69, now test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69)
+[0m23:48:43.628283 [debug] [Thread-1 (]: Began compiling node test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69
+[0m23:48:43.632226 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69"
+[0m23:48:43.632226 [debug] [Thread-1 (]: Began executing node test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69
+[0m23:48:43.632226 [debug] [Thread-1 (]: Writing runtime sql for node "test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69"
+[0m23:48:43.638577 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69"
+[0m23:48:43.638577 [debug] [Thread-1 (]: On test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69: BEGIN
+[0m23:48:43.638577 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:43.848082 [debug] [Thread-1 (]: SQL status: BEGIN in 0.208 seconds
+[0m23:48:43.848082 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69"
+[0m23:48:43.850093 [debug] [Thread-1 (]: On test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id_etudiant
+from "sid_lite"."public"."stg_etudiant"
+where id_etudiant is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:48:43.855721 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.005 seconds
+[0m23:48:43.859376 [debug] [Thread-1 (]: On test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69: ROLLBACK
+[0m23:48:43.859376 [debug] [Thread-1 (]: On test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69: Close
+[0m23:48:43.859376 [info ] [Thread-1 (]: 6 of 16 PASS not_null_stg_etudiant_id_etudiant ................................. [[32mPASS[0m in 0.23s]
+[0m23:48:43.867801 [debug] [Thread-1 (]: Finished running node test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69
+[0m23:48:43.867801 [debug] [Thread-1 (]: Began running node test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884
+[0m23:48:43.870735 [info ] [Thread-1 (]: 7 of 16 START test not_null_stg_mobilite_id_mobilite ........................... [RUN]
+[0m23:48:43.872643 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69, now test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884)
+[0m23:48:43.874657 [debug] [Thread-1 (]: Began compiling node test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884
+[0m23:48:43.885509 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884"
+[0m23:48:43.887085 [debug] [Thread-1 (]: Began executing node test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884
+[0m23:48:43.899077 [debug] [Thread-1 (]: Writing runtime sql for node "test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884"
+[0m23:48:43.901526 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884"
+[0m23:48:43.901526 [debug] [Thread-1 (]: On test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884: BEGIN
+[0m23:48:43.903656 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:43.990271 [debug] [Thread-1 (]: SQL status: BEGIN in 0.089 seconds
+[0m23:48:43.990271 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884"
+[0m23:48:43.990271 [debug] [Thread-1 (]: On test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id_mobilite
+from "sid_lite"."public"."stg_mobilite"
+where id_mobilite is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:48:43.998748 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m23:48:43.998748 [debug] [Thread-1 (]: On test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884: ROLLBACK
+[0m23:48:43.998748 [debug] [Thread-1 (]: On test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884: Close
+[0m23:48:44.006879 [info ] [Thread-1 (]: 7 of 16 PASS not_null_stg_mobilite_id_mobilite ................................. [[32mPASS[0m in 0.13s]
+[0m23:48:44.008091 [debug] [Thread-1 (]: Finished running node test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884
+[0m23:48:44.008091 [debug] [Thread-1 (]: Began running node test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c
+[0m23:48:44.008091 [info ] [Thread-1 (]: 8 of 16 START test not_null_vw_fait_mobilite_id_mobilite ....................... [RUN]
+[0m23:48:44.008091 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884, now test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c)
+[0m23:48:44.015049 [debug] [Thread-1 (]: Began compiling node test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c
+[0m23:48:44.025910 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c"
+[0m23:48:44.025910 [debug] [Thread-1 (]: Began executing node test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c
+[0m23:48:44.031916 [debug] [Thread-1 (]: Writing runtime sql for node "test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c"
+[0m23:48:44.040337 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c"
+[0m23:48:44.042353 [debug] [Thread-1 (]: On test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c: BEGIN
+[0m23:48:44.044372 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:44.130738 [debug] [Thread-1 (]: SQL status: BEGIN in 0.090 seconds
+[0m23:48:44.135426 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c"
+[0m23:48:44.135426 [debug] [Thread-1 (]: On test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id_mobilite
+from "sid_lite"."public"."vw_fait_mobilite"
+where id_mobilite is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:48:44.146502 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.007 seconds
+[0m23:48:44.148939 [debug] [Thread-1 (]: On test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c: ROLLBACK
+[0m23:48:44.148939 [debug] [Thread-1 (]: On test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c: Close
+[0m23:48:44.154744 [info ] [Thread-1 (]: 8 of 16 PASS not_null_vw_fait_mobilite_id_mobilite ............................. [[32mPASS[0m in 0.15s]
+[0m23:48:44.157623 [debug] [Thread-1 (]: Finished running node test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c
+[0m23:48:44.159711 [debug] [Thread-1 (]: Began running node test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5
+[0m23:48:44.159711 [info ] [Thread-1 (]: 9 of 16 START test unique_hub_etablissement_oid_etablissement .................. [RUN]
+[0m23:48:44.161830 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c, now test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5)
+[0m23:48:44.163842 [debug] [Thread-1 (]: Began compiling node test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5
+[0m23:48:44.193197 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5"
+[0m23:48:44.196569 [debug] [Thread-1 (]: Began executing node test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5
+[0m23:48:44.204504 [debug] [Thread-1 (]: Writing runtime sql for node "test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5"
+[0m23:48:44.209762 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5"
+[0m23:48:44.211634 [debug] [Thread-1 (]: On test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5: BEGIN
+[0m23:48:44.211634 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:44.306972 [debug] [Thread-1 (]: SQL status: BEGIN in 0.094 seconds
+[0m23:48:44.308941 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5"
+[0m23:48:44.310053 [debug] [Thread-1 (]: On test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    oid_etablissement as unique_field,
+    count(*) as n_records
+
+from "sid_lite"."public"."hub_etablissement"
+where oid_etablissement is not null
+group by oid_etablissement
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:48:44.318699 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.006 seconds
+[0m23:48:44.322585 [debug] [Thread-1 (]: On test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5: ROLLBACK
+[0m23:48:44.325672 [debug] [Thread-1 (]: On test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5: Close
+[0m23:48:44.328391 [info ] [Thread-1 (]: 9 of 16 PASS unique_hub_etablissement_oid_etablissement ........................ [[32mPASS[0m in 0.17s]
+[0m23:48:44.331184 [debug] [Thread-1 (]: Finished running node test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5
+[0m23:48:44.331184 [debug] [Thread-1 (]: Began running node test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466
+[0m23:48:44.333750 [info ] [Thread-1 (]: 10 of 16 START test unique_hub_etudiant_id_etudiant ............................ [RUN]
+[0m23:48:44.335002 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5, now test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466)
+[0m23:48:44.337003 [debug] [Thread-1 (]: Began compiling node test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466
+[0m23:48:44.345084 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466"
+[0m23:48:44.350426 [debug] [Thread-1 (]: Began executing node test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466
+[0m23:48:44.350426 [debug] [Thread-1 (]: Writing runtime sql for node "test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466"
+[0m23:48:44.358667 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466"
+[0m23:48:44.360679 [debug] [Thread-1 (]: On test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466: BEGIN
+[0m23:48:44.361814 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:44.458053 [debug] [Thread-1 (]: SQL status: BEGIN in 0.096 seconds
+[0m23:48:44.459565 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466"
+[0m23:48:44.459565 [debug] [Thread-1 (]: On test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id_etudiant as unique_field,
+    count(*) as n_records
+
+from "sid_lite"."public"."hub_etudiant"
+where id_etudiant is not null
+group by id_etudiant
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:48:44.468125 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.005 seconds
+[0m23:48:44.493622 [debug] [Thread-1 (]: On test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466: ROLLBACK
+[0m23:48:44.493622 [debug] [Thread-1 (]: On test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466: Close
+[0m23:48:44.499684 [info ] [Thread-1 (]: 10 of 16 PASS unique_hub_etudiant_id_etudiant .................................. [[32mPASS[0m in 0.16s]
+[0m23:48:44.500863 [debug] [Thread-1 (]: Finished running node test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466
+[0m23:48:44.500863 [debug] [Thread-1 (]: Began running node test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530
+[0m23:48:44.500863 [info ] [Thread-1 (]: 11 of 16 START test unique_link_mobilite_id_mobilite ........................... [RUN]
+[0m23:48:44.500863 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466, now test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530)
+[0m23:48:44.506859 [debug] [Thread-1 (]: Began compiling node test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530
+[0m23:48:44.520606 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530"
+[0m23:48:44.524586 [debug] [Thread-1 (]: Began executing node test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530
+[0m23:48:44.531636 [debug] [Thread-1 (]: Writing runtime sql for node "test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530"
+[0m23:48:44.533649 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530"
+[0m23:48:44.533649 [debug] [Thread-1 (]: On test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530: BEGIN
+[0m23:48:44.533649 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:44.622842 [debug] [Thread-1 (]: SQL status: BEGIN in 0.090 seconds
+[0m23:48:44.629568 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530"
+[0m23:48:44.631147 [debug] [Thread-1 (]: On test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id_mobilite as unique_field,
+    count(*) as n_records
+
+from "sid_lite"."public"."link_mobilite"
+where id_mobilite is not null
+group by id_mobilite
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:48:44.631147 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m23:48:44.639502 [debug] [Thread-1 (]: On test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530: ROLLBACK
+[0m23:48:44.641511 [debug] [Thread-1 (]: On test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530: Close
+[0m23:48:44.643325 [info ] [Thread-1 (]: 11 of 16 PASS unique_link_mobilite_id_mobilite ................................. [[32mPASS[0m in 0.14s]
+[0m23:48:44.647617 [debug] [Thread-1 (]: Finished running node test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530
+[0m23:48:44.648635 [debug] [Thread-1 (]: Began running node test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1
+[0m23:48:44.648635 [info ] [Thread-1 (]: 12 of 16 START test unique_sat_mobilite_id_mobilite ............................ [RUN]
+[0m23:48:44.651090 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530, now test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1)
+[0m23:48:44.651090 [debug] [Thread-1 (]: Began compiling node test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1
+[0m23:48:44.658664 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1"
+[0m23:48:44.664198 [debug] [Thread-1 (]: Began executing node test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1
+[0m23:48:44.665592 [debug] [Thread-1 (]: Writing runtime sql for node "test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1"
+[0m23:48:44.672434 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1"
+[0m23:48:44.674046 [debug] [Thread-1 (]: On test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1: BEGIN
+[0m23:48:44.676228 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:44.873909 [debug] [Thread-1 (]: SQL status: BEGIN in 0.197 seconds
+[0m23:48:44.873909 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1"
+[0m23:48:44.876029 [debug] [Thread-1 (]: On test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id_mobilite as unique_field,
+    count(*) as n_records
+
+from "sid_lite"."public"."sat_mobilite"
+where id_mobilite is not null
+group by id_mobilite
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:48:44.879137 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.005 seconds
+[0m23:48:44.884871 [debug] [Thread-1 (]: On test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1: ROLLBACK
+[0m23:48:44.887771 [debug] [Thread-1 (]: On test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1: Close
+[0m23:48:44.891323 [info ] [Thread-1 (]: 12 of 16 PASS unique_sat_mobilite_id_mobilite .................................. [[32mPASS[0m in 0.24s]
+[0m23:48:44.893339 [debug] [Thread-1 (]: Finished running node test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1
+[0m23:48:44.895356 [debug] [Thread-1 (]: Began running node test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb
+[0m23:48:44.895356 [info ] [Thread-1 (]: 13 of 16 START test unique_stg_etablissement_oid_etablissement ................. [RUN]
+[0m23:48:44.895356 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1, now test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb)
+[0m23:48:44.895356 [debug] [Thread-1 (]: Began compiling node test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb
+[0m23:48:44.913017 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb"
+[0m23:48:44.913017 [debug] [Thread-1 (]: Began executing node test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb
+[0m23:48:44.925112 [debug] [Thread-1 (]: Writing runtime sql for node "test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb"
+[0m23:48:44.930468 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb"
+[0m23:48:44.930468 [debug] [Thread-1 (]: On test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb: BEGIN
+[0m23:48:44.930468 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:45.024518 [debug] [Thread-1 (]: SQL status: BEGIN in 0.093 seconds
+[0m23:48:45.029347 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb"
+[0m23:48:45.029347 [debug] [Thread-1 (]: On test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    oid_etablissement as unique_field,
+    count(*) as n_records
+
+from "sid_lite"."public"."stg_etablissement"
+where oid_etablissement is not null
+group by oid_etablissement
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:48:45.038370 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.007 seconds
+[0m23:48:45.043409 [debug] [Thread-1 (]: On test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb: ROLLBACK
+[0m23:48:45.043409 [debug] [Thread-1 (]: On test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb: Close
+[0m23:48:45.047862 [info ] [Thread-1 (]: 13 of 16 PASS unique_stg_etablissement_oid_etablissement ....................... [[32mPASS[0m in 0.15s]
+[0m23:48:45.051963 [debug] [Thread-1 (]: Finished running node test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb
+[0m23:48:45.051963 [debug] [Thread-1 (]: Began running node test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42
+[0m23:48:45.051963 [info ] [Thread-1 (]: 14 of 16 START test unique_stg_etudiant_id_etudiant ............................ [RUN]
+[0m23:48:45.057419 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb, now test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42)
+[0m23:48:45.057419 [debug] [Thread-1 (]: Began compiling node test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42
+[0m23:48:45.073607 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42"
+[0m23:48:45.077826 [debug] [Thread-1 (]: Began executing node test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42
+[0m23:48:45.086545 [debug] [Thread-1 (]: Writing runtime sql for node "test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42"
+[0m23:48:45.092507 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42"
+[0m23:48:45.093717 [debug] [Thread-1 (]: On test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42: BEGIN
+[0m23:48:45.093717 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:45.253202 [debug] [Thread-1 (]: SQL status: BEGIN in 0.159 seconds
+[0m23:48:45.255109 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42"
+[0m23:48:45.255109 [debug] [Thread-1 (]: On test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id_etudiant as unique_field,
+    count(*) as n_records
+
+from "sid_lite"."public"."stg_etudiant"
+where id_etudiant is not null
+group by id_etudiant
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:48:45.259556 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m23:48:45.261846 [debug] [Thread-1 (]: On test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42: ROLLBACK
+[0m23:48:45.261846 [debug] [Thread-1 (]: On test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42: Close
+[0m23:48:45.261846 [info ] [Thread-1 (]: 14 of 16 PASS unique_stg_etudiant_id_etudiant .................................. [[32mPASS[0m in 0.21s]
+[0m23:48:45.264935 [debug] [Thread-1 (]: Finished running node test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42
+[0m23:48:45.264935 [debug] [Thread-1 (]: Began running node test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f
+[0m23:48:45.264935 [info ] [Thread-1 (]: 15 of 16 START test unique_stg_mobilite_id_mobilite ............................ [RUN]
+[0m23:48:45.264935 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42, now test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f)
+[0m23:48:45.268453 [debug] [Thread-1 (]: Began compiling node test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f
+[0m23:48:45.275896 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f"
+[0m23:48:45.275896 [debug] [Thread-1 (]: Began executing node test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f
+[0m23:48:45.278995 [debug] [Thread-1 (]: Writing runtime sql for node "test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f"
+[0m23:48:45.278995 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f"
+[0m23:48:45.278995 [debug] [Thread-1 (]: On test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f: BEGIN
+[0m23:48:45.281516 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:45.331696 [debug] [Thread-1 (]: SQL status: BEGIN in 0.054 seconds
+[0m23:48:45.331696 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f"
+[0m23:48:45.331696 [debug] [Thread-1 (]: On test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id_mobilite as unique_field,
+    count(*) as n_records
+
+from "sid_lite"."public"."stg_mobilite"
+where id_mobilite is not null
+group by id_mobilite
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:48:45.340090 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m23:48:45.340090 [debug] [Thread-1 (]: On test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f: ROLLBACK
+[0m23:48:45.340090 [debug] [Thread-1 (]: On test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f: Close
+[0m23:48:45.346512 [info ] [Thread-1 (]: 15 of 16 PASS unique_stg_mobilite_id_mobilite .................................. [[32mPASS[0m in 0.08s]
+[0m23:48:45.347809 [debug] [Thread-1 (]: Finished running node test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f
+[0m23:48:45.347809 [debug] [Thread-1 (]: Began running node test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce
+[0m23:48:45.347809 [info ] [Thread-1 (]: 16 of 16 START test unique_vw_fait_mobilite_id_mobilite ........................ [RUN]
+[0m23:48:45.350094 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f, now test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce)
+[0m23:48:45.350094 [debug] [Thread-1 (]: Began compiling node test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce
+[0m23:48:45.356088 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce"
+[0m23:48:45.356088 [debug] [Thread-1 (]: Began executing node test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce
+[0m23:48:45.360878 [debug] [Thread-1 (]: Writing runtime sql for node "test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce"
+[0m23:48:45.360878 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce"
+[0m23:48:45.360878 [debug] [Thread-1 (]: On test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce: BEGIN
+[0m23:48:45.360878 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:48:45.406570 [debug] [Thread-1 (]: SQL status: BEGIN in 0.047 seconds
+[0m23:48:45.406570 [debug] [Thread-1 (]: Using postgres connection "test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce"
+[0m23:48:45.406570 [debug] [Thread-1 (]: On test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "node_id": "test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id_mobilite as unique_field,
+    count(*) as n_records
+
+from "sid_lite"."public"."vw_fait_mobilite"
+where id_mobilite is not null
+group by id_mobilite
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:48:45.413628 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.005 seconds
+[0m23:48:45.413628 [debug] [Thread-1 (]: On test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce: ROLLBACK
+[0m23:48:45.413628 [debug] [Thread-1 (]: On test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce: Close
+[0m23:48:45.422127 [info ] [Thread-1 (]: 16 of 16 PASS unique_vw_fait_mobilite_id_mobilite .............................. [[32mPASS[0m in 0.06s]
+[0m23:48:45.422127 [debug] [Thread-1 (]: Finished running node test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce
+[0m23:48:45.422127 [debug] [MainThread]: Using postgres connection "master"
+[0m23:48:45.422127 [debug] [MainThread]: On master: BEGIN
+[0m23:48:45.422127 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:48:45.478705 [debug] [MainThread]: SQL status: BEGIN in 0.053 seconds
+[0m23:48:45.478705 [debug] [MainThread]: On master: COMMIT
+[0m23:48:45.478705 [debug] [MainThread]: Using postgres connection "master"
+[0m23:48:45.478705 [debug] [MainThread]: On master: COMMIT
+[0m23:48:45.478705 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m23:48:45.478705 [debug] [MainThread]: On master: Close
+[0m23:48:45.478705 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:48:45.478705 [debug] [MainThread]: Connection 'list_sid_lite_public' was properly closed.
+[0m23:48:45.478705 [debug] [MainThread]: Connection 'test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce' was properly closed.
+[0m23:48:45.478705 [info ] [MainThread]: 
+[0m23:48:45.486798 [info ] [MainThread]: Finished running 16 data tests in 0 hours 0 minutes and 2.55 seconds (2.55s).
+[0m23:48:45.492388 [debug] [MainThread]: Command end result
+[0m23:48:45.535536 [debug] [MainThread]: Wrote artifact WritableManifest to D:\GitHub\erasmus-sid-lite\target\manifest.json
+[0m23:48:45.544111 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\GitHub\erasmus-sid-lite\target\semantic_manifest.json
+[0m23:48:45.552369 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\GitHub\erasmus-sid-lite\target\run_results.json
+[0m23:48:45.552369 [info ] [MainThread]: 
+[0m23:48:45.552369 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:48:45.552369 [info ] [MainThread]: 
+[0m23:48:45.552369 [info ] [MainThread]: Done. PASS=16 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=16
+[0m23:48:45.552369 [debug] [MainThread]: Command `dbt test` succeeded at 23:48:45.552369 after 3.69 seconds
+[0m23:48:45.552369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001290EA15AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001290FB27CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001290E88F490>]}
+[0m23:48:45.552369 [debug] [MainThread]: Flushing usage events
+[0m23:48:45.983030 [debug] [MainThread]: An error was encountered while trying to flush usage events

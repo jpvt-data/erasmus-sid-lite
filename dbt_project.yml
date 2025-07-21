@@ -8,10 +8,11 @@ model-paths: ["dbt/sid-lite/models"]
 macro-paths: ["macros"]
 seed-paths: ["data/raw"]
 
+
 target-path: "target"
 clean-targets:
   - "target"
-  - "dbt_modules"
+  - "dbt_packages"
 
 models:
   sid_lite:

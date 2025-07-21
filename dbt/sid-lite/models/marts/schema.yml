@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: vw_fait_mobilite
+    description: >
+      Vue étoile pour l'analyse des mobilités Erasmus+. Centralise tous les attributs mobilité, étudiant, établissements (origine/accueil) pour exploitation BI.
+    columns:
+      - name: id_mobilite
+        description: "Identifiant unique de la mobilité"
+        tests:
+          - not_null
+          - unique
+      - name: id_etudiant
+        description: "Identifiant unique de l'étudiant"
+      - name: date_debut
+        description: "Date de début de la mobilité"
+      - name: date_fin
+        description: "Date de fin de la mobilité"
+      - name: type_mobilite
+        description: "Type de mobilité"
+      - name: statut_mobilite
+        description: "Statut de la mobilité"
+      - name: nom_etudiant
+        description: "Nom de l'étudiant"
+      - name: prenom_etudiant
+        description: "Prénom de l'étudiant"
+      - name: nationalite
+        description: "Nationalité de l'étudiant"
+      - name: nom_etab_origine
+        description: "Nom de l'établissement d'origine"
+      - name: pays_etab_origine
+        description: "Pays de l'établissement d'origine"
+      - name: type_etab_origine
+        description: "Type d'établissement d'origine"
+      - name: nom_etab_accueil
+        description: "Nom de l'établissement d'accueil"
+      - name: pays_etab_accueil
+        description: "Pays de l'établissement d'accueil"
+      - name: type_etab_accueil
+        description: "Type d'établissement d'accueil"
+      - name: load_dts
+        description: "Horodatage de chargement technique"
+      - name: source
+        description: "Source de la donnée (traçabilité)"

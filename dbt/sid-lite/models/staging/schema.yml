@@ -13,3 +13,7 @@ models:
     columns:
       - name: id_mobilite
         tests: [not_null, unique]
+  - name: stg_autorisation_rls
+    columns:
+      - name: user_email
+        tests: [not_null, unique]

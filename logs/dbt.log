@@ -39304,3 +39304,438 @@ having count(*) > 1
 [0m11:36:33.548863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166BEB3FDD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166BEB3F0D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166BEB3FCD0>]}
 [0m11:36:33.550868 [debug] [MainThread]: Flushing usage events
 [0m11:36:33.554682 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:59:51.540314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000190C0EDDAD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000190C0ED7090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000190C0EDCA10>]}
+
+
+============================== 11:59:51.544359 | 572ec5bc-0f0a-4b9a-962e-f02c0c0cd7cd ==============================
+[0m11:59:51.544359 [info ] [MainThread]: Running with dbt=1.10.4
+[0m11:59:51.548448 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'D:\\GitHub\\erasmus-sid-lite\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\jpvt\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt docs generate', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:59:51.732250 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '572ec5bc-0f0a-4b9a-962e-f02c0c0cd7cd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000190C2073AD0>]}
+[0m11:59:51.791744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '572ec5bc-0f0a-4b9a-962e-f02c0c0cd7cd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000190BD78B1D0>]}
+[0m11:59:51.791744 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m11:59:51.972421 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m11:59:52.167306 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:59:52.175534 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:59:52.217872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '572ec5bc-0f0a-4b9a-962e-f02c0c0cd7cd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000190C23825D0>]}
+[0m11:59:52.325775 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '572ec5bc-0f0a-4b9a-962e-f02c0c0cd7cd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000190C2374FD0>]}
+[0m11:59:52.329282 [info ] [MainThread]: Found 9 models, 4 seeds, 18 data tests, 822 macros
+[0m11:59:52.329282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '572ec5bc-0f0a-4b9a-962e-f02c0c0cd7cd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000190C2380510>]}
+[0m11:59:52.332525 [info ] [MainThread]: 
+[0m11:59:52.332525 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:59:52.340199 [info ] [MainThread]: 
+[0m11:59:52.346946 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m11:59:52.368869 [debug] [ThreadPool]: Acquiring new postgres connection 'list_sid_lite_public'
+[0m11:59:52.806670 [debug] [ThreadPool]: Using postgres connection "list_sid_lite_public"
+[0m11:59:52.808203 [debug] [ThreadPool]: On list_sid_lite_public: BEGIN
+[0m11:59:52.808203 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:59:52.924749 [debug] [ThreadPool]: SQL status: BEGIN in 0.115 seconds
+[0m11:59:52.926768 [debug] [ThreadPool]: Using postgres connection "list_sid_lite_public"
+[0m11:59:52.928785 [debug] [ThreadPool]: On list_sid_lite_public: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "connection_name": "list_sid_lite_public"} */
+select
+      'sid_lite' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'sid_lite' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'sid_lite' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m11:59:52.945817 [debug] [ThreadPool]: SQL status: SELECT 13 in 0.015 seconds
+[0m11:59:52.949841 [debug] [ThreadPool]: On list_sid_lite_public: ROLLBACK
+[0m11:59:52.951851 [debug] [ThreadPool]: On list_sid_lite_public: Close
+[0m11:59:52.991401 [debug] [MainThread]: Using postgres connection "master"
+[0m11:59:52.991401 [debug] [MainThread]: On master: BEGIN
+[0m11:59:52.991401 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:59:53.037836 [debug] [MainThread]: SQL status: BEGIN in 0.049 seconds
+[0m11:59:53.037836 [debug] [MainThread]: Using postgres connection "master"
+[0m11:59:53.037836 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m11:59:53.049014 [debug] [MainThread]: SQL status: SELECT 7 in 0.009 seconds
+[0m11:59:53.054221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '572ec5bc-0f0a-4b9a-962e-f02c0c0cd7cd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000190C2382550>]}
+[0m11:59:53.054221 [debug] [MainThread]: On master: ROLLBACK
+[0m11:59:53.054221 [debug] [MainThread]: On master: Close
+[0m11:59:53.062266 [debug] [Thread-1 (]: Began running node model.sid_lite.vw_fait_mobilite
+[0m11:59:53.062266 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.sid_lite.vw_fait_mobilite'
+[0m11:59:53.062266 [debug] [Thread-1 (]: Began compiling node model.sid_lite.vw_fait_mobilite
+[0m11:59:53.070346 [debug] [Thread-1 (]: Writing injected SQL for node "model.sid_lite.vw_fait_mobilite"
+[0m11:59:53.070346 [debug] [Thread-1 (]: Began executing node model.sid_lite.vw_fait_mobilite
+[0m11:59:53.070346 [debug] [Thread-1 (]: Finished running node model.sid_lite.vw_fait_mobilite
+[0m11:59:53.070346 [debug] [Thread-1 (]: Began running node seed.sid_lite.etablissement
+[0m11:59:53.070346 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sid_lite.vw_fait_mobilite, now seed.sid_lite.etablissement)
+[0m11:59:53.070346 [debug] [Thread-1 (]: Began compiling node seed.sid_lite.etablissement
+[0m11:59:53.078455 [debug] [Thread-1 (]: Began executing node seed.sid_lite.etablissement
+[0m11:59:53.078455 [debug] [Thread-1 (]: Finished running node seed.sid_lite.etablissement
+[0m11:59:53.078455 [debug] [Thread-1 (]: Began running node seed.sid_lite.etudiant
+[0m11:59:53.078455 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.sid_lite.etablissement, now seed.sid_lite.etudiant)
+[0m11:59:53.078455 [debug] [Thread-1 (]: Began compiling node seed.sid_lite.etudiant
+[0m11:59:53.078455 [debug] [Thread-1 (]: Began executing node seed.sid_lite.etudiant
+[0m11:59:53.078455 [debug] [Thread-1 (]: Finished running node seed.sid_lite.etudiant
+[0m11:59:53.078455 [debug] [Thread-1 (]: Began running node seed.sid_lite.mobilite
+[0m11:59:53.086496 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.sid_lite.etudiant, now seed.sid_lite.mobilite)
+[0m11:59:53.086496 [debug] [Thread-1 (]: Began compiling node seed.sid_lite.mobilite
+[0m11:59:53.086496 [debug] [Thread-1 (]: Began executing node seed.sid_lite.mobilite
+[0m11:59:53.086496 [debug] [Thread-1 (]: Finished running node seed.sid_lite.mobilite
+[0m11:59:53.086496 [debug] [Thread-1 (]: Began running node seed.sid_lite.table_autorisations_rls
+[0m11:59:53.086496 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.sid_lite.mobilite, now seed.sid_lite.table_autorisations_rls)
+[0m11:59:53.086496 [debug] [Thread-1 (]: Began compiling node seed.sid_lite.table_autorisations_rls
+[0m11:59:53.095402 [debug] [Thread-1 (]: Began executing node seed.sid_lite.table_autorisations_rls
+[0m11:59:53.095402 [debug] [Thread-1 (]: Finished running node seed.sid_lite.table_autorisations_rls
+[0m11:59:53.095402 [debug] [Thread-1 (]: Began running node test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c
+[0m11:59:53.095402 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.sid_lite.table_autorisations_rls, now test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c)
+[0m11:59:53.095402 [debug] [Thread-1 (]: Began compiling node test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c
+[0m11:59:53.103108 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c"
+[0m11:59:53.110713 [debug] [Thread-1 (]: Began executing node test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c
+[0m11:59:53.110713 [debug] [Thread-1 (]: Finished running node test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c
+[0m11:59:53.110713 [debug] [Thread-1 (]: Began running node test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce
+[0m11:59:53.110713 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.not_null_vw_fait_mobilite_id_mobilite.cbb3e92e4c, now test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce)
+[0m11:59:53.110713 [debug] [Thread-1 (]: Began compiling node test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce
+[0m11:59:53.119011 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce"
+[0m11:59:53.119011 [debug] [Thread-1 (]: Began executing node test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce
+[0m11:59:53.119011 [debug] [Thread-1 (]: Finished running node test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce
+[0m11:59:53.119011 [debug] [Thread-1 (]: Began running node model.sid_lite.stg_etablissement
+[0m11:59:53.119011 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.unique_vw_fait_mobilite_id_mobilite.db6391c4ce, now model.sid_lite.stg_etablissement)
+[0m11:59:53.119011 [debug] [Thread-1 (]: Began compiling node model.sid_lite.stg_etablissement
+[0m11:59:53.127252 [debug] [Thread-1 (]: Writing injected SQL for node "model.sid_lite.stg_etablissement"
+[0m11:59:53.127252 [debug] [Thread-1 (]: Began executing node model.sid_lite.stg_etablissement
+[0m11:59:53.127252 [debug] [Thread-1 (]: Finished running node model.sid_lite.stg_etablissement
+[0m11:59:53.127252 [debug] [Thread-1 (]: Began running node model.sid_lite.stg_etudiant
+[0m11:59:53.127252 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sid_lite.stg_etablissement, now model.sid_lite.stg_etudiant)
+[0m11:59:53.131864 [debug] [Thread-1 (]: Began compiling node model.sid_lite.stg_etudiant
+[0m11:59:53.135460 [debug] [Thread-1 (]: Writing injected SQL for node "model.sid_lite.stg_etudiant"
+[0m11:59:53.135460 [debug] [Thread-1 (]: Began executing node model.sid_lite.stg_etudiant
+[0m11:59:53.135460 [debug] [Thread-1 (]: Finished running node model.sid_lite.stg_etudiant
+[0m11:59:53.135460 [debug] [Thread-1 (]: Began running node model.sid_lite.stg_mobilite
+[0m11:59:53.135460 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sid_lite.stg_etudiant, now model.sid_lite.stg_mobilite)
+[0m11:59:53.140785 [debug] [Thread-1 (]: Began compiling node model.sid_lite.stg_mobilite
+[0m11:59:53.143825 [debug] [Thread-1 (]: Writing injected SQL for node "model.sid_lite.stg_mobilite"
+[0m11:59:53.143825 [debug] [Thread-1 (]: Began executing node model.sid_lite.stg_mobilite
+[0m11:59:53.145685 [debug] [Thread-1 (]: Finished running node model.sid_lite.stg_mobilite
+[0m11:59:53.145685 [debug] [Thread-1 (]: Began running node model.sid_lite.stg_autorisation_rls
+[0m11:59:53.147395 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sid_lite.stg_mobilite, now model.sid_lite.stg_autorisation_rls)
+[0m11:59:53.148179 [debug] [Thread-1 (]: Began compiling node model.sid_lite.stg_autorisation_rls
+[0m11:59:53.150186 [debug] [Thread-1 (]: Writing injected SQL for node "model.sid_lite.stg_autorisation_rls"
+[0m11:59:53.151934 [debug] [Thread-1 (]: Began executing node model.sid_lite.stg_autorisation_rls
+[0m11:59:53.153691 [debug] [Thread-1 (]: Finished running node model.sid_lite.stg_autorisation_rls
+[0m11:59:53.153691 [debug] [Thread-1 (]: Began running node model.sid_lite.hub_etablissement
+[0m11:59:53.153691 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sid_lite.stg_autorisation_rls, now model.sid_lite.hub_etablissement)
+[0m11:59:53.156807 [debug] [Thread-1 (]: Began compiling node model.sid_lite.hub_etablissement
+[0m11:59:53.182388 [info ] [Thread-1 (]: 11:59:53 + Loading sid_lite.public.hub_etablissement from 1 source(s)
+[0m11:59:53.235572 [debug] [Thread-1 (]: Writing injected SQL for node "model.sid_lite.hub_etablissement"
+[0m11:59:53.237578 [debug] [Thread-1 (]: Began executing node model.sid_lite.hub_etablissement
+[0m11:59:53.237578 [debug] [Thread-1 (]: Finished running node model.sid_lite.hub_etablissement
+[0m11:59:53.237578 [debug] [Thread-1 (]: Began running node test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69
+[0m11:59:53.237578 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sid_lite.hub_etablissement, now test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69)
+[0m11:59:53.240609 [debug] [Thread-1 (]: Began compiling node test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69
+[0m11:59:53.243916 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69"
+[0m11:59:53.245923 [debug] [Thread-1 (]: Began executing node test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69
+[0m11:59:53.245923 [debug] [Thread-1 (]: Finished running node test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69
+[0m11:59:53.245923 [debug] [Thread-1 (]: Began running node test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb
+[0m11:59:53.247930 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.not_null_stg_etablissement_oid_etablissement.293e95fa69, now test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb)
+[0m11:59:53.247930 [debug] [Thread-1 (]: Began compiling node test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb
+[0m11:59:53.249979 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb"
+[0m11:59:53.249979 [debug] [Thread-1 (]: Began executing node test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb
+[0m11:59:53.249979 [debug] [Thread-1 (]: Finished running node test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb
+[0m11:59:53.249979 [debug] [Thread-1 (]: Began running node model.sid_lite.hub_etudiant
+[0m11:59:53.249979 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.unique_stg_etablissement_oid_etablissement.ceccfd02fb, now model.sid_lite.hub_etudiant)
+[0m11:59:53.257992 [debug] [Thread-1 (]: Began compiling node model.sid_lite.hub_etudiant
+[0m11:59:53.259998 [info ] [Thread-1 (]: 11:59:53 + Loading sid_lite.public.hub_etudiant from 1 source(s)
+[0m11:59:53.263210 [debug] [Thread-1 (]: Writing injected SQL for node "model.sid_lite.hub_etudiant"
+[0m11:59:53.263210 [debug] [Thread-1 (]: Began executing node model.sid_lite.hub_etudiant
+[0m11:59:53.263210 [debug] [Thread-1 (]: Finished running node model.sid_lite.hub_etudiant
+[0m11:59:53.266373 [debug] [Thread-1 (]: Began running node test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69
+[0m11:59:53.266373 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sid_lite.hub_etudiant, now test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69)
+[0m11:59:53.268133 [debug] [Thread-1 (]: Began compiling node test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69
+[0m11:59:53.271621 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69"
+[0m11:59:53.273628 [debug] [Thread-1 (]: Began executing node test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69
+[0m11:59:53.274633 [debug] [Thread-1 (]: Finished running node test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69
+[0m11:59:53.274633 [debug] [Thread-1 (]: Began running node test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42
+[0m11:59:53.276642 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.not_null_stg_etudiant_id_etudiant.c316f49a69, now test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42)
+[0m11:59:53.276642 [debug] [Thread-1 (]: Began compiling node test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42
+[0m11:59:53.282666 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42"
+[0m11:59:53.284023 [debug] [Thread-1 (]: Began executing node test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42
+[0m11:59:53.284023 [debug] [Thread-1 (]: Finished running node test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42
+[0m11:59:53.284023 [debug] [Thread-1 (]: Began running node model.sid_lite.link_mobilite
+[0m11:59:53.286748 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.unique_stg_etudiant_id_etudiant.72c62c3a42, now model.sid_lite.link_mobilite)
+[0m11:59:53.286748 [debug] [Thread-1 (]: Began compiling node model.sid_lite.link_mobilite
+[0m11:59:53.295824 [info ] [Thread-1 (]: 11:59:53 + Loading sid_lite.public.link_mobilite from 1 source(s)
+[0m11:59:53.313950 [debug] [Thread-1 (]: Writing injected SQL for node "model.sid_lite.link_mobilite"
+[0m11:59:53.317210 [debug] [Thread-1 (]: Began executing node model.sid_lite.link_mobilite
+[0m11:59:53.317210 [debug] [Thread-1 (]: Finished running node model.sid_lite.link_mobilite
+[0m11:59:53.317210 [debug] [Thread-1 (]: Began running node model.sid_lite.sat_mobilite
+[0m11:59:53.317210 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sid_lite.link_mobilite, now model.sid_lite.sat_mobilite)
+[0m11:59:53.317210 [debug] [Thread-1 (]: Began compiling node model.sid_lite.sat_mobilite
+[0m11:59:53.356660 [debug] [Thread-1 (]: Writing injected SQL for node "model.sid_lite.sat_mobilite"
+[0m11:59:53.356660 [debug] [Thread-1 (]: Began executing node model.sid_lite.sat_mobilite
+[0m11:59:53.365111 [debug] [Thread-1 (]: Finished running node model.sid_lite.sat_mobilite
+[0m11:59:53.365111 [debug] [Thread-1 (]: Began running node test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884
+[0m11:59:53.365111 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.sid_lite.sat_mobilite, now test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884)
+[0m11:59:53.365111 [debug] [Thread-1 (]: Began compiling node test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884
+[0m11:59:53.369408 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884"
+[0m11:59:53.369408 [debug] [Thread-1 (]: Began executing node test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884
+[0m11:59:53.369408 [debug] [Thread-1 (]: Finished running node test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884
+[0m11:59:53.373426 [debug] [Thread-1 (]: Began running node test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f
+[0m11:59:53.373426 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.not_null_stg_mobilite_id_mobilite.252b014884, now test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f)
+[0m11:59:53.373426 [debug] [Thread-1 (]: Began compiling node test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f
+[0m11:59:53.373426 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f"
+[0m11:59:53.373426 [debug] [Thread-1 (]: Began executing node test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f
+[0m11:59:53.373426 [debug] [Thread-1 (]: Finished running node test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f
+[0m11:59:53.381418 [debug] [Thread-1 (]: Began running node test.sid_lite.not_null_stg_autorisation_rls_user_email.a36f06c961
+[0m11:59:53.381418 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.unique_stg_mobilite_id_mobilite.2a9057335f, now test.sid_lite.not_null_stg_autorisation_rls_user_email.a36f06c961)
+[0m11:59:53.381418 [debug] [Thread-1 (]: Began compiling node test.sid_lite.not_null_stg_autorisation_rls_user_email.a36f06c961
+[0m11:59:53.386023 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.not_null_stg_autorisation_rls_user_email.a36f06c961"
+[0m11:59:53.386023 [debug] [Thread-1 (]: Began executing node test.sid_lite.not_null_stg_autorisation_rls_user_email.a36f06c961
+[0m11:59:53.387568 [debug] [Thread-1 (]: Finished running node test.sid_lite.not_null_stg_autorisation_rls_user_email.a36f06c961
+[0m11:59:53.387568 [debug] [Thread-1 (]: Began running node test.sid_lite.unique_stg_autorisation_rls_user_email.7546e72392
+[0m11:59:53.387568 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.not_null_stg_autorisation_rls_user_email.a36f06c961, now test.sid_lite.unique_stg_autorisation_rls_user_email.7546e72392)
+[0m11:59:53.387568 [debug] [Thread-1 (]: Began compiling node test.sid_lite.unique_stg_autorisation_rls_user_email.7546e72392
+[0m11:59:53.392179 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.unique_stg_autorisation_rls_user_email.7546e72392"
+[0m11:59:53.392179 [debug] [Thread-1 (]: Began executing node test.sid_lite.unique_stg_autorisation_rls_user_email.7546e72392
+[0m11:59:53.393729 [debug] [Thread-1 (]: Finished running node test.sid_lite.unique_stg_autorisation_rls_user_email.7546e72392
+[0m11:59:53.393729 [debug] [Thread-1 (]: Began running node test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee
+[0m11:59:53.394761 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.unique_stg_autorisation_rls_user_email.7546e72392, now test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee)
+[0m11:59:53.394761 [debug] [Thread-1 (]: Began compiling node test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee
+[0m11:59:53.399547 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee"
+[0m11:59:53.399547 [debug] [Thread-1 (]: Began executing node test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee
+[0m11:59:53.401092 [debug] [Thread-1 (]: Finished running node test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee
+[0m11:59:53.401092 [debug] [Thread-1 (]: Began running node test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5
+[0m11:59:53.402636 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.not_null_hub_etablissement_oid_etablissement.fe3097b7ee, now test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5)
+[0m11:59:53.402636 [debug] [Thread-1 (]: Began compiling node test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5
+[0m11:59:53.406184 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5"
+[0m11:59:53.406184 [debug] [Thread-1 (]: Began executing node test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5
+[0m11:59:53.406184 [debug] [Thread-1 (]: Finished running node test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5
+[0m11:59:53.408695 [debug] [Thread-1 (]: Began running node test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22
+[0m11:59:53.408695 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.unique_hub_etablissement_oid_etablissement.5ad2eb40d5, now test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22)
+[0m11:59:53.409782 [debug] [Thread-1 (]: Began compiling node test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22
+[0m11:59:53.411367 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22"
+[0m11:59:53.411367 [debug] [Thread-1 (]: Began executing node test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22
+[0m11:59:53.414445 [debug] [Thread-1 (]: Finished running node test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22
+[0m11:59:53.414445 [debug] [Thread-1 (]: Began running node test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466
+[0m11:59:53.414445 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.not_null_hub_etudiant_id_etudiant.e5647bef22, now test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466)
+[0m11:59:53.414445 [debug] [Thread-1 (]: Began compiling node test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466
+[0m11:59:53.417746 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466"
+[0m11:59:53.417746 [debug] [Thread-1 (]: Began executing node test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466
+[0m11:59:53.422757 [debug] [Thread-1 (]: Finished running node test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466
+[0m11:59:53.423263 [debug] [Thread-1 (]: Began running node test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab
+[0m11:59:53.423263 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.unique_hub_etudiant_id_etudiant.4c17fba466, now test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab)
+[0m11:59:53.423263 [debug] [Thread-1 (]: Began compiling node test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab
+[0m11:59:53.429711 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab"
+[0m11:59:53.431260 [debug] [Thread-1 (]: Began executing node test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab
+[0m11:59:53.431260 [debug] [Thread-1 (]: Finished running node test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab
+[0m11:59:53.433267 [debug] [Thread-1 (]: Began running node test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530
+[0m11:59:53.433771 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.not_null_link_mobilite_id_mobilite.8579def1ab, now test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530)
+[0m11:59:53.433771 [debug] [Thread-1 (]: Began compiling node test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530
+[0m11:59:53.439526 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530"
+[0m11:59:53.439526 [debug] [Thread-1 (]: Began executing node test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530
+[0m11:59:53.441531 [debug] [Thread-1 (]: Finished running node test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530
+[0m11:59:53.441531 [debug] [Thread-1 (]: Began running node test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343
+[0m11:59:53.443535 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.unique_link_mobilite_id_mobilite.9f1004f530, now test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343)
+[0m11:59:53.443535 [debug] [Thread-1 (]: Began compiling node test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343
+[0m11:59:53.447948 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343"
+[0m11:59:53.447948 [debug] [Thread-1 (]: Began executing node test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343
+[0m11:59:53.447948 [debug] [Thread-1 (]: Finished running node test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343
+[0m11:59:53.447948 [debug] [Thread-1 (]: Began running node test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1
+[0m11:59:53.453429 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.sid_lite.not_null_sat_mobilite_id_mobilite.395c773343, now test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1)
+[0m11:59:53.453429 [debug] [Thread-1 (]: Began compiling node test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1
+[0m11:59:53.456089 [debug] [Thread-1 (]: Writing injected SQL for node "test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1"
+[0m11:59:53.456089 [debug] [Thread-1 (]: Began executing node test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1
+[0m11:59:53.458724 [debug] [Thread-1 (]: Finished running node test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1
+[0m11:59:53.458724 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:59:53.460757 [debug] [MainThread]: Connection 'list_sid_lite_public' was properly closed.
+[0m11:59:53.460757 [debug] [MainThread]: Connection 'test.sid_lite.unique_sat_mobilite_id_mobilite.486fdf2ce1' was properly closed.
+[0m11:59:53.464503 [debug] [MainThread]: Command end result
+[0m11:59:53.543645 [debug] [MainThread]: Wrote artifact WritableManifest to D:\GitHub\erasmus-sid-lite\target\manifest.json
+[0m11:59:53.548625 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\GitHub\erasmus-sid-lite\target\semantic_manifest.json
+[0m11:59:53.550902 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\GitHub\erasmus-sid-lite\target\run_results.json
+[0m11:59:53.598392 [debug] [MainThread]: Acquiring new postgres connection 'generate_catalog'
+[0m11:59:53.599409 [info ] [MainThread]: Building catalog
+[0m11:59:53.605646 [debug] [ThreadPool]: Acquiring new postgres connection 'sid_lite.information_schema'
+[0m11:59:53.618802 [debug] [ThreadPool]: Using postgres connection "sid_lite.information_schema"
+[0m11:59:53.620121 [debug] [ThreadPool]: On sid_lite.information_schema: BEGIN
+[0m11:59:53.620121 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:59:53.677277 [debug] [ThreadPool]: SQL status: BEGIN in 0.057 seconds
+[0m11:59:53.678959 [debug] [ThreadPool]: Using postgres connection "sid_lite.information_schema"
+[0m11:59:53.681378 [debug] [ThreadPool]: On sid_lite.information_schema: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "sid_lite", "target_name": "dev", "connection_name": "sid_lite.information_schema"} */
+
+    
+    
+
+    select
+        'sid_lite' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            when 'm' then 'MATERIALIZED VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+    where ((upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('hub_etablissement')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('link_mobilite')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('mobilite')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('etablissement')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('stg_mobilite')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('sat_mobilite')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('etudiant')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('stg_etablissement')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('vw_fait_mobilite')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('stg_etudiant')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('stg_autorisation_rls')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('table_autorisations_rls')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('hub_etudiant')))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence in ('p', 'u') -- [p]ermanent table or [u]nlogged table. Exclude [t]emporary tables
+      and tbl.relkind in ('r', 'v', 'f', 'p', 'm') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table, [m]aterialized view. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+[0m11:59:53.733737 [debug] [ThreadPool]: SQL status: SELECT 93 in 0.052 seconds
+[0m11:59:53.735744 [debug] [ThreadPool]: On sid_lite.information_schema: ROLLBACK
+[0m11:59:53.735744 [debug] [ThreadPool]: On sid_lite.information_schema: Close
+[0m11:59:53.758516 [debug] [MainThread]: Wrote artifact CatalogArtifact to D:\GitHub\erasmus-sid-lite\target\catalog.json
+[0m11:59:53.794713 [debug] [MainThread]: Wrote artifact WritableManifest to D:\GitHub\erasmus-sid-lite\target\manifest.json
+[0m11:59:53.797981 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\GitHub\erasmus-sid-lite\target\semantic_manifest.json
+[0m11:59:53.797981 [info ] [MainThread]: Catalog written to D:\GitHub\erasmus-sid-lite\target\catalog.json
+[0m11:59:53.797981 [debug] [MainThread]: Command `dbt docs generate` succeeded at 11:59:53.797981 after 2.36 seconds
+[0m11:59:53.797981 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m11:59:53.797981 [debug] [MainThread]: Connection 'sid_lite.information_schema' was properly closed.
+[0m11:59:53.797981 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000190BFF00E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000190BFF02A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000190C0C8F7D0>]}
+[0m11:59:53.802297 [debug] [MainThread]: Flushing usage events
+[0m11:59:54.266269 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:00:56.883847 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A12CBE0D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A12A6F350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A12A6F390>]}
+
+
+============================== 12:00:56.883847 | 21ec360d-bd1a-4e33-9e04-97cf0a6f4472 ==============================
+[0m12:00:56.883847 [info ] [MainThread]: Running with dbt=1.10.4
+[0m12:00:56.891956 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\jpvt\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'D:\\GitHub\\erasmus-sid-lite\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt docs serve', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:00:57.082207 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '21ec360d-bd1a-4e33-9e04-97cf0a6f4472', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A13E90890>]}
+[0m12:00:57.136916 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '21ec360d-bd1a-4e33-9e04-97cf0a6f4472', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A11DA21D0>]}
+[0m12:01:51.433907 [error] [MainThread]: Encountered an error:
+
+[0m12:01:51.486082 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\jpvt\anaconda3\envs\sid_dbt311\Lib\site-packages\dbt\cli\requires.py", line 161, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jpvt\anaconda3\envs\sid_dbt311\Lib\site-packages\dbt\cli\requires.py", line 111, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jpvt\anaconda3\envs\sid_dbt311\Lib\site-packages\dbt\cli\requires.py", line 254, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jpvt\anaconda3\envs\sid_dbt311\Lib\site-packages\dbt\cli\requires.py", line 285, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jpvt\anaconda3\envs\sid_dbt311\Lib\site-packages\dbt\cli\requires.py", line 332, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jpvt\anaconda3\envs\sid_dbt311\Lib\site-packages\dbt\cli\main.py", line 307, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\jpvt\anaconda3\envs\sid_dbt311\Lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+  File "C:\Users\jpvt\anaconda3\envs\sid_dbt311\Lib\socketserver.py", line 233, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jpvt\anaconda3\envs\sid_dbt311\Lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jpvt\anaconda3\envs\sid_dbt311\Lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m12:01:51.490523 [debug] [MainThread]: Command `dbt docs serve` failed at 12:01:51.490523 after 54.70 seconds
+[0m12:01:51.492536 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A12CF52D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A12CC41D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022A13D0FA50>]}
+[0m12:01:51.494548 [debug] [MainThread]: Flushing usage events
+[0m12:01:51.914506 [debug] [MainThread]: An error was encountered while trying to flush usage events
